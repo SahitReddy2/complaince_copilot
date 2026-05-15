@@ -35,13 +35,9 @@ async def analyze_compliance(
     Analyze product compliance against regulations.
     """
     try:
-        # Initialize compliance agent
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-        if not openai_api_key:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
-        compliance_agent = ComplianceAgent(openai_api_key, db)
-        
+        # ComplianceAgent now uses local Ollama; no API key required
+        compliance_agent = ComplianceAgent(db=db)
+
         # Convert request data to proper models
         ingredients = [ExtractedIngredient(**ingredient) for ingredient in request.ingredients]
         claims = [ExtractedClaim(**claim) for claim in request.claims]
@@ -133,12 +129,8 @@ async def get_regulatory_guidance(
     Get regulatory guidance for a specific query.
     """
     try:
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-        if not openai_api_key:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
-        compliance_agent = ComplianceAgent(openai_api_key, db)
-        
+        compliance_agent = ComplianceAgent(db=db)
+
         guidance = compliance_agent.get_regulatory_guidance(
             query=request.get("query", ""),
             jurisdiction=request.get("jurisdiction", "US")

@@ -14,8 +14,8 @@ class ExtractedIngredient(BaseModel):
     severity: str = "low"
 
 class IngredientExtractor:
-    def __init__(self, openai_api_key: str):
-        self.client = openai.OpenAI(api_key=openai_api_key)
+    def __init__(self, openai_api_key: str = None):
+        self.client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
     
     def extract(self, document_text: str) -> List[ExtractedIngredient]:
         print("🧪 Extracting from:\n", document_text)
@@ -46,7 +46,7 @@ class IngredientExtractor:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4.1",
+                model="llama3.1:8b",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
                 max_tokens=2000

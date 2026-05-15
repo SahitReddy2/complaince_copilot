@@ -1,0 +1,43 @@
+industry: pharma_otc
+display_name: "OTC Drugs & Pharmaceuticals"
+
+component_label: "active ingredients"
+component_singular: "active ingredient"
+
+law_frameworks:
+  - category: fda_otc_monograph
+    name: "FDA OTC Drug Monographs"
+    jurisdiction: US
+  - category: fda_drug_labeling
+    name: "FDA Drug Labeling (21 CFR 201)"
+    jurisdiction: US
+  - category: dscsa
+    name: "Drug Supply Chain Security Act"
+    jurisdiction: US
+  - category: fda_advertising_drugs
+    name: "FDA Prescription Drug Advertising"
+    jurisdiction: US
+
+claim_categories:
+  indication: [for the treatment of, relieves, reduces symptoms of]
+  efficacy: [clinically proven, fast-acting, works in minutes]
+  safety: [safe, well-tolerated, no side effects]
+  comparison: ["better than", "more effective than", "#1 doctor recommended"]
+
+component_severity_guide: |
+  - High: Active ingredients exceeding monograph limits, withdrawn/banned actives
+  - Medium: Active ingredients with required warnings (e.g., acetaminophen liver warning)
+  - Low: Inactive excipients within standard limits
+
+claim_severity_guide: |
+  High-risk: off-label indication claims, comparative superiority without head-to-head trials,
+    omitting required warnings/contraindications
+  Medium-risk: efficacy claims without monograph backing, missing fair-balance disclosures
+  Low-risk: monograph-approved indication statements
+
+high_risk_components:
+  - acetaminophen
+  - aspirin
+  - ibuprofen
+  - pseudoephedrine
+  - dextromethorphan

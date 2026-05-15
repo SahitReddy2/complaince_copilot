@@ -1,0 +1,90 @@
+industry: cosmetics
+display_name: "Cosmetics & Personal Care"
+
+# Components extracted from labels for this industry
+component_label: "ingredients"
+component_singular: "ingredient"
+
+# Regulatory frameworks checked against.
+# Each `category` must match the metadata->>'category' tag used when ingesting
+# regulatory PDFs into the law_chunks table. To enable a jurisdiction below,
+# ingest the relevant law texts under that category in the database.
+law_frameworks:
+  # ── United States ──
+  - category: prop65
+    name: "California Prop 65"
+    jurisdiction: US
+  - category: mocra
+    name: "MoCRA 2022"
+    jurisdiction: US
+  - category: cosmetics
+    name: "Federal Cosmetics Act"
+    jurisdiction: US
+  - category: color_additives
+    name: "FDA Color Additive Regulations"
+    jurisdiction: US
+  - category: ftc_health
+    name: "FTC Health Product Guidelines"
+    jurisdiction: US
+
+  # ── European Union ── (ingest EC 1223/2009 + annexes to enable)
+  - category: eu_cosmetics_regulation
+    name: "EC Regulation 1223/2009 (EU Cosmetics)"
+    jurisdiction: EU
+  - category: eu_cosmetics_annex_ii
+    name: "EU Cosmetics Annex II (Prohibited Substances)"
+    jurisdiction: EU
+  - category: eu_cosmetics_annex_iii
+    name: "EU Cosmetics Annex III (Restricted Substances)"
+    jurisdiction: EU
+
+  # ── United Kingdom ── (post-Brexit retained version of EU Reg 1223/2009)
+  - category: uk_cosmetics_regulation
+    name: "UK Cosmetics Regulation (assimilated EC 1223/2009)"
+    jurisdiction: UK
+
+# Claim taxonomy for marketing review
+claim_categories:
+  anti-aging: [anti-aging, anti age, wrinkle, fine lines, youthful, aging]
+  moisturizing: [moisturize, hydrate, dry skin, moisture, hydration]
+  acne: [acne, breakout, blemish, pimple, blackhead, whitehead]
+  whitening: [whitening, brightening, lightening, pigmentation, dark spots]
+  sun_protection: [spf, sunscreen, uv protection, sun protection]
+  natural: [natural, organic, botanical, plant-based, herbal]
+  sensitive_skin: [sensitive, gentle, hypoallergenic, non-irritating]
+  efficacy: [proven, effective, results, improvement, reduces]
+  safety: [safe, tested, approved, dermatologist, clinically]
+  texture: [smooth, soft, silky, creamy, lightweight, non-greasy]
+
+# Severity rubric for components
+component_severity_guide: |
+  - High: Known allergens or restricted substances (fragrance, parfum, limonene, parabens, etc.)
+  - Medium: Ingredients flagged for irritation or controversial (preservatives, some surfactants)
+  - Low: Safe or common ingredients (moisturizers, thickeners, emulsifiers)
+
+# Severity rubric for claims
+claim_severity_guide: |
+  High-risk claims include:
+    - Medical/therapeutic claims
+    - Drug-like claims
+    - Unsubstantiated superlatives
+    - Disease prevention claims
+    - Structure/function claims
+  Medium-risk claims include:
+    - Efficacy claims without proof
+    - Anti-aging claims
+    - Specific percentage improvements
+    - "Clinical" or "dermatologist" references
+  Low-risk claims include:
+    - Basic function descriptions
+    - Ingredient listings
+    - Texture/sensory descriptions
+
+# High-risk components to always retrieve regulatory chunks for
+high_risk_components:
+  - benzene
+  - formaldehyde
+  - lead
+  - mercury
+  - arsenic
+  - toluene

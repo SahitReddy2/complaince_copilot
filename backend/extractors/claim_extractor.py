@@ -12,9 +12,17 @@ class ExtractedClaim(BaseModel):
     substantiation_required: bool = False
 
 class ClaimExtractor:
-    def __init__(self, openai_api_key: str):
-        self.client = openai.OpenAI(api_key=openai_api_key)
-        
+    def __init__(self, openai_api_key: str = None, industry: str = "cosmetics"):
+        self.client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+
+        # Load industry-specific claim categories (falls back to hardcoded cosmetics)
+        try:
+            from backend.industry_config import load_industry
+            cfg = load_industry(industry)
+            self.industry_claim_categories = cfg.get("claim_categories", {})
+        except Exception:
+            self.industry_claim_categories = {}
+
         # Define problematic claim patterns
         self.medical_terms = [
             "cure", "treat", "heal", "therapeutic", "medicine", "drug",
@@ -71,7 +79,7 @@ class ClaimExtractor:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4.1",
+                model="llama3.1:8b",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
                 max_tokens=2000
@@ -137,11 +145,12 @@ class ClaimExtractor:
         }
     
     def categorize_claim_type(self, claim_text: str) -> str:
-        """Categorize claim type based on content."""
-        
+        """Categorize claim type using industry-specific categories from YAML config."""
+
         claim_lower = claim_text.lower()
-        
-        categories = {
+
+        # Use industry config if available; falls back to cosmetics defaults
+        categories = self.industry_claim_categories or {
             'anti-aging': ['anti-aging', 'anti age', 'wrinkle', 'fine lines', 'youthful', 'aging'],
             'moisturizing': ['moisturize', 'hydrate', 'dry skin', 'moisture', 'hydration'],
             'acne': ['acne', 'breakout', 'blemish', 'pimple', 'blackhead', 'whitehead'],
@@ -153,11 +162,11 @@ class ClaimExtractor:
             'safety': ['safe', 'tested', 'approved', 'dermatologist', 'clinically'],
             'texture': ['smooth', 'soft', 'silky', 'creamy', 'lightweight', 'non-greasy']
         }
-        
+
         for category, keywords in categories.items():
             if any(keyword in claim_lower for keyword in keywords):
                 return category
-        
+
         return 'general'
     
     def extract_from_marketing_material(self, text: str) -> List[ExtractedClaim]:

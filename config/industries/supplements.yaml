@@ -1,0 +1,48 @@
+industry: supplements
+display_name: "Dietary Supplements"
+
+component_label: "ingredients"
+component_singular: "ingredient"
+
+law_frameworks:
+  - category: dshea
+    name: "DSHEA (Dietary Supplement Health and Education Act)"
+    jurisdiction: US
+  - category: fda_supplement_labeling
+    name: "FDA Supplement Labeling (21 CFR 101.36)"
+    jurisdiction: US
+  - category: fda_nlea
+    name: "FDA NLEA Health Claims"
+    jurisdiction: US
+  - category: ftc_supplement_advertising
+    name: "FTC Dietary Supplement Advertising Guide"
+    jurisdiction: US
+  - category: cgmp_supplements
+    name: "21 CFR 111 cGMP for Dietary Supplements"
+    jurisdiction: US
+
+claim_categories:
+  disease_treatment: [cures, treats, prevents disease, diagnoses]
+  structure_function: [supports, promotes, helps maintain, boosts]
+  nutrient_content: [good source of, excellent source of, high in]
+  health: [heart health, immune support, joint health, energy, focus]
+  safety: [clinically tested, third-party tested, gmp certified]
+
+component_severity_guide: |
+  - High: Substances banned by FDA (ephedra, kava warnings, DMAA), unapproved new dietary ingredients
+  - Medium: Active substances requiring disclosure, controversial herbs (yohimbe, comfrey)
+  - Low: GRAS vitamins, minerals, common botanicals
+
+claim_severity_guide: |
+  High-risk: any disease treatment/prevention claim (requires drug approval),
+    "clinically proven" without studies, drug-like efficacy claims
+  Medium-risk: structure/function claims without "this statement has not been evaluated by FDA" disclaimer
+  Low-risk: basic nutrient content claims that match label
+
+high_risk_components:
+  - ephedra
+  - dmaa
+  - kava
+  - yohimbe
+  - comfrey
+  - sibutramine

@@ -19,6 +19,8 @@ from dotenv import load_dotenv
 import psycopg2
 from openai import OpenAI
 
+from backend.industry_config import load_industry, get_law_frameworks, get_high_risk_components
+
 # ───────────────────────────  SETUP  ────────────────────────────
 
 def get_db_connection():
@@ -34,14 +36,14 @@ def get_db_connection():
     )
 
 def get_openai_client():
-    """Get OpenAI client."""
+    """Get Ollama client (OpenAI-compatible)."""
     load_dotenv()
-    return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    return OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 
 def embed_query(client: OpenAI, query: str) -> List[float]:
     """Create embedding for query."""
     resp = client.embeddings.create(
-        model="text-embedding-3-small",
+        model="nomic-embed-text",
         input=query,
     )
     return resp.data[0].embedding
@@ -161,7 +163,15 @@ def check_single_law_direct(
     claims: List[str],
     law_category: str,
     law_name: str,
+    industry_cfg: Dict = None,
 ) -> Dict:
+
+    industry_cfg = industry_cfg or load_industry("cosmetics")
+    component_label = industry_cfg.get("component_label", "ingredients")
+    component_singular = industry_cfg.get("component_singular", "ingredient")
+    component_severity_guide = industry_cfg.get("component_severity_guide", "")
+    claim_severity_guide = industry_cfg.get("claim_severity_guide", "")
+    high_risk = [c.lower() for c in industry_cfg.get("high_risk_components", [])]
 
     claim_queries = []
     if claims:
@@ -169,7 +179,7 @@ def check_single_law_direct(
         claim_queries = [
             f"{law_category} claims: {claims_text}",
             f"{law_category} marketing language: {claims_text}",
-            f"{law_category} prohibitied claims",
+            f"{law_category} prohibited claims",
         ]
 
     queries = (
@@ -183,8 +193,8 @@ def check_single_law_direct(
         else [
             f"{law_category} " + " ".join(ingredients),
             f"{law_category} prohibited substances",
-            f"{law_category} banned ingredients",
-            *[f"{law_category} {ingredient}" for ingredient in ingredients if ingredient.lower() in ['benzene', 'formaldehyde', 'lead', 'mercury', 'arsenic', 'toluene']],
+            f"{law_category} banned {component_label}",
+            *[f"{law_category} {ing}" for ing in ingredients if ing.lower() in high_risk],
             *claim_queries,
         ]
     )
@@ -224,8 +234,10 @@ def check_single_law_direct(
     ingredient_list = ", ".join(ingredients)
     claims_text = "; ".join(claims)
 
+    industry_name = industry_cfg.get("display_name", "the product")
+
     if not ingredients:
-        prompt = f"""You are a regulatory compliance expert analyzing **marketing claims** against {law_name}.
+        prompt = f"""You are a regulatory compliance expert analyzing **marketing claims** for {industry_name} against {law_name}.
 
 REGULATORY CONTEXT:
 {context}
@@ -236,29 +248,14 @@ CLAIMS TO ANALYZE:
 INSTRUCTIONS:
 1. Identify marketing claims that violate {law_name}
 2. Look for misleading language, unsubstantiated effects, or restricted phrasing
-3. Flag any health-related claims that imply physiological changes without FDA approval
-4. Only report actual violations backed by excerpts
-5. Ignore ingredients entirely
-6. Assign a severity rating ( high, medium, or low) based on regulatory scrutiny
-7. Return a 'severities' array matching the order of the 'issues' array.
+3. Only report actual violations backed by excerpts
+4. Ignore {component_label} entirely
+5. Assign a severity rating (critical, high, medium, or low) based on regulatory scrutiny
+6. For each issue, return a short "evidence" quote from the regulatory excerpts that supports the finding
+7. Return arrays 'issues', 'severities', and 'evidence' all in matching order
 
-High-risk claims include:
-    - Medical/therapeutic claims
-    - Drug-like claims
-    - Unsubstantiated superlatives
-    - Disease prevention claims
-    - Structure/function claims
-    
-    Medium-risk claims include:
-    - Efficacy claims without proof
-    - Anti-aging claims
-    - Specific percentage improvements
-    - "Clinical" or "dermatologist" references
-    
-    Low-risk claims include:
-    - Basic function descriptions
-    - Ingredient listings
-    - Texture/sensory descriptions
+CLAIM SEVERITY GUIDE:
+{claim_severity_guide}
 
 Return ONLY a JSON object:
 {{
@@ -266,33 +263,32 @@ Return ONLY a JSON object:
 "compliant": true or false,
 "issues": ["specific issue 1", "specific issue 2"],
 "fixes": ["specific fix 1", "specific fix 2"],
+"evidence": ["short quote from excerpt supporting issue 1", "short quote for issue 2"],
 "confidence": 0.0 to 1.0,
 "compliance_score": 0 to 100,
 "severities": ["critical", "high", "medium", "low"]
 }}"""
     else:
-        prompt = f"""You are a regulatory compliance expert analyzing cosmetic ingredients against {law_name}.
+        prompt = f"""You are a regulatory compliance expert analyzing {industry_name} {component_label} against {law_name}.
 
 REGULATORY CONTEXT:
 {context}
 
-INGREDIENTS TO ANALYZE:
+{component_label.upper()} TO ANALYZE:
 {ingredient_list}
 
 INSTRUCTIONS:
-1. Review each ingredient against the regulatory excerpts above
-2. Look for explicit prohibitions, restrictions, concentration limits, or labeling requirements  
+1. Review each {component_singular} against the regulatory excerpts above
+2. Look for explicit prohibitions, restrictions, concentration limits, or labeling requirements
 3. Consider chemical synonyms and alternate names
 4. Only flag violations where there's clear regulatory support
-5. If the ingredient is not explicitly mentioned or discussed in the regulatory excerpts, assume it is compliant. Do not infer non-compliance from absence.
+5. If a {component_singular} is not explicitly mentioned in the excerpts, assume it is compliant. Do not infer non-compliance from absence.
 6. Assign a severity rating (critical, high, medium, or low) based on regulatory scrutiny
-7. Return a 'severities' array matching the order of the 'issues' array.
+7. For each issue, return a short "evidence" quote from the regulatory excerpts that supports the finding
+8. Return arrays 'issues', 'severities', and 'evidence' all in matching order
 
-Severity rating guidelines:
-    - High: Known allergens or restricted substances (fragrance, parfum, limonene, parabens, etc.)
-    - Medium: Ingredients flagged for irritation or controversial (preservatives, some surfactants)
-    - Low: Safe or common ingredients (moisturizers, thickeners, emulsifiers)
-
+COMPONENT SEVERITY GUIDE:
+{component_severity_guide}
 
 Return ONLY a JSON object:
 {{
@@ -300,6 +296,7 @@ Return ONLY a JSON object:
 "compliant": true or false,
 "issues": ["specific issue 1", "specific issue 2"],
 "fixes": ["specific fix 1", "specific fix 2"],
+"evidence": ["short quote from excerpt supporting issue 1", "short quote for issue 2"],
 "confidence": 0.0 to 1.0,
 "compliance_score": 0 to 100,
 "severities": ["critical", "high", "medium", "low"]
@@ -307,7 +304,7 @@ Return ONLY a JSON object:
 
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="llama3.1:8b",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.1,
             max_tokens=1000,
@@ -322,18 +319,20 @@ Return ONLY a JSON object:
         # ─── Filter hallucinated ingredient issues before building issue dicts ───
         original_issues = result.get("issues", [])
         severities = result.get("severities", ["low"] * len(original_issues))
+        evidence_quotes = result.get("evidence", [""] * len(original_issues))
 
         if not ingredients and original_issues:
-            filtered_issues = []
-            filtered_severities = []
+            filtered_issues, filtered_severities, filtered_evidence = [], [], []
             for i, issue in enumerate(original_issues):
                 if not is_likely_ingredient_issue(issue):
                     filtered_issues.append(issue)
-                    filtered_severities.append(severities[i])
+                    filtered_severities.append(severities[i] if i < len(severities) else "low")
+                    filtered_evidence.append(evidence_quotes[i] if i < len(evidence_quotes) else "")
 
             if filtered_issues:
                 result["issues"] = filtered_issues
                 result["severities"] = filtered_severities
+                evidence_quotes = filtered_evidence
             else:
                 result["issues"] = original_issues
                 result["severities"] = severities
@@ -342,27 +341,39 @@ Return ONLY a JSON object:
         result["compliant"] = len(result["issues"]) == 0
         severities = result.get("severities", ["low"] * len(result["issues"]))
 
+        # Build top citation sources from retrieved chunks (top 3 by similarity)
+        top_citations = [
+            {
+                "source_doc_id": doc_id,
+                "source": (metadata or {}).get("source", "") if isinstance(metadata, dict) else "",
+                "similarity": round(float(similarity), 3),
+                "excerpt": text[:300].strip().replace("\n", " "),
+            }
+            for text, metadata, doc_id, similarity in all_chunks[:3]
+        ]
+
         issue_details = []
         for i, issue in enumerate(result["issues"]):
             severity = severities[i] if i < len(severities) else "low"
+            evidence = evidence_quotes[i] if i < len(evidence_quotes) else ""
 
-            #Auto downgrade severity for vague or soft marketing (lessening LLM aggresiveness with default phrases)
-            if(
+            # Auto-downgrade severity for vague marketing copy
+            if (
                 "dermatologist recommended" in issue.lower()
                 or "clinically tested" in issue.lower()
                 or "gentle formula" in issue.lower()
             ):
                 if severity == "high":
-                    severity == "critical"
+                    severity = "medium"
 
             issue_details.append({
                 "law": law_name,
                 "reason": issue,
                 "confidence": result.get("confidence", 0.0),
-                "severity": severity
+                "severity": severity,
+                "evidence": evidence,
+                "citations": top_citations,
             })
-
-            
 
         return {
             "law": law_name,
@@ -371,6 +382,7 @@ Return ONLY a JSON object:
             "compliance_score": result.get("compliance_score", 50),
             "issues": issue_details,
             "fixes": result.get("fixes", []),
+            "citations": top_citations,
         }
 
     except Exception as e:
@@ -386,88 +398,111 @@ Return ONLY a JSON object:
         }
 
 
-def evaluate_product_direct(ingredients: List[str], claims: List[str] = None) -> Dict:
+def evaluate_product_direct(
+    ingredients: List[str],
+    claims: List[str] = None,
+    industry: str = "cosmetics",
+    jurisdictions: List[str] = None,
+) -> Dict:
     """
     Run compliance checks using direct database access.
+
+    Args:
+        ingredients: Component names extracted from the label.
+        claims: Marketing claims extracted from the label.
+        industry: Industry config name (cosmetics, food, supplements, pharma_otc).
+        jurisdictions: Filter law frameworks to these jurisdictions (e.g., ["US", "EU"]).
+                       If None, all jurisdictions in the industry config are checked.
     """
-    print(f" EVALUATING INGREDIENTS: {', '.join(ingredients)}")
-    
+    print(f" EVALUATING [{industry}] {', '.join(ingredients) if ingredients else 'claims-only'}")
+
+    try:
+        industry_cfg = load_industry(industry)
+    except FileNotFoundError as e:
+        return {"non_compliant": [{"law": "Config Error", "reason": str(e)}]}
+
     try:
         conn = get_db_connection()
         client = get_openai_client()
-        print(" Connected to database and OpenAI")
+        print(" Connected to database and LLM")
     except Exception as e:
         print(f" Setup failed: {e}")
         return {"non_compliant": [{"law": "System Error", "reason": f"Setup failed: {e}"}]}
-    
-    # Define law frameworks
-    law_frameworks = [
-        {"category": "prop65", "name": "California Prop 65"},
-        {"category": "mocra", "name": "MoCRA 2022"},
-        {"category": "cosmetics", "name": "Federal Cosmetics Act"},
-        {"category": "color_additives", "name": "FDA Color Additive Regulations"},
-        {"category": "ftc_health", "name": "FTC Health Product Guidelines"},
-    ]
-    
+
+    # Load law frameworks from industry config, optionally filtered by jurisdiction
+    all_frameworks = industry_cfg.get("law_frameworks", [])
+    if jurisdictions:
+        law_frameworks = [f for f in all_frameworks if f.get("jurisdiction") in jurisdictions]
+    else:
+        law_frameworks = all_frameworks
+
     non_compliant_results = []
-    
+    by_jurisdiction: Dict[str, List[Dict]] = {}
+
     for law in law_frameworks:
         try:
             result = check_single_law_direct(
                 conn, client, ingredients, claims or [],
-                law["category"], law["name"]
+                law["category"], law["name"],
+                industry_cfg=industry_cfg,
             )
-            
+
+            jurisdiction = law.get("jurisdiction", "US")
+            by_jurisdiction.setdefault(jurisdiction, [])
+
             if not result.get("compliant", True):
                 issues = result.get("issues", [])
-                print(f"  ⚠️ Issues detected for {law['name']}: {issues}")
+                print(f"  ⚠️ Issues detected for {law['name']}: {len(issues)} issue(s)")
 
                 for issue in issues:
-                    if isinstance(issue, dict):
-                        non_compliant_results.append({
-                            "law": issue.get("law", law["name"]),
-                            "reason": issue.get("reason", "Regulatory violation"),
-                            "confidence": issue.get("confidence", 0.0),
-                            "severity": issue.get("severity", "low")
-                        })
-                    else:
-                        # fallback for string-based issues (older or malformed output)
-                        non_compliant_results.append({
-                            "law": law["name"],
-                            "reason": issue,
-                            "confidence": result.get("confidence", 0.0),
-                            "severity": "low"  # or guess default
-                        })
-                            
+                    record = {
+                        "law": issue.get("law", law["name"]) if isinstance(issue, dict) else law["name"],
+                        "jurisdiction": jurisdiction,
+                        "reason": issue.get("reason", "Regulatory violation") if isinstance(issue, dict) else issue,
+                        "confidence": issue.get("confidence", result.get("confidence", 0.0)) if isinstance(issue, dict) else result.get("confidence", 0.0),
+                        "severity": issue.get("severity", "low") if isinstance(issue, dict) else "low",
+                        "evidence": issue.get("evidence", "") if isinstance(issue, dict) else "",
+                        "citations": issue.get("citations", []) if isinstance(issue, dict) else result.get("citations", []),
+                    }
+                    non_compliant_results.append(record)
+                    by_jurisdiction[jurisdiction].append(record)
+
         except Exception as e:
             print(f" Error checking {law['name']}: {e}")
             non_compliant_results.append({
                 "law": law["name"],
+                "jurisdiction": law.get("jurisdiction", "US"),
                 "reason": f"Analysis error: {e}"
             })
-    
+
     conn.close()
-    
-    # Summary
+
     print(f"\n COMPLIANCE SUMMARY:")
-    print(f"   Non-compliant: {len(non_compliant_results)}")
-    print(f"   Compliant: {len(law_frameworks) - len(non_compliant_results)}")
-    
-    return {"non_compliant": non_compliant_results}
+    print(f"   Industry: {industry_cfg.get('display_name', industry)}")
+    print(f"   Frameworks checked: {len(law_frameworks)}")
+    print(f"   Non-compliant findings: {len(non_compliant_results)}")
+
+    return {
+        "industry": industry,
+        "non_compliant": non_compliant_results,
+        "by_jurisdiction": by_jurisdiction,
+    }
 
 # ───────────────────────────  CLI ENTRY  ─────────────────────────
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print("Usage: python3 simple_compliance.py '{\"ingredients\": [\"benzene\"]}'", file=sys.stderr)
+        print(
+            'Usage: python -m backend.check_compliance \'{"industry":"cosmetics","ingredients":["benzene"],"jurisdictions":["US"]}\'',
+            file=sys.stderr,
+        )
         sys.exit(1)
-    
+
     arg = sys.argv[1]
 
     if arg.endswith(".json") and os.path.isfile(arg):
         with open(arg, "r") as f:
             payload = json.load(f)
-    
     else:
         try:
             payload = json.loads(sys.argv[1])
@@ -475,19 +510,20 @@ def main() -> None:
             print("Input must be valid JSON or path to JSON file", file=sys.stderr)
             sys.exit(1)
 
-    if isinstance(payload, dict):
-        ingredients = payload.get("ingredients", [])
-        claims = payload.get("claims", [])
-        
-        if not ingredients and not claims:
-            print("Must provide at least 'ingredients' or 'claims' for compliance checking.", file=sys.stderr)
-            sys.exit(1)
-    else:
-        print("JSON must be a dictionary with optional 'ingredients' and/or 'claims' keys", file=sys.stderr)
+    if not isinstance(payload, dict):
+        print("JSON must be a dictionary", file=sys.stderr)
         sys.exit(1)
 
-    result = evaluate_product_direct(ingredients, claims)
-    # print(f"\n FINAL RESULT:")
+    ingredients = payload.get("ingredients", [])
+    claims = payload.get("claims", [])
+    industry = payload.get("industry", "cosmetics")
+    jurisdictions = payload.get("jurisdictions")  # None = all
+
+    if not ingredients and not claims:
+        print("Must provide at least 'ingredients' or 'claims'", file=sys.stderr)
+        sys.exit(1)
+
+    result = evaluate_product_direct(ingredients, claims, industry=industry, jurisdictions=jurisdictions)
     print(json.dumps(result))
 
 if __name__ == "__main__":

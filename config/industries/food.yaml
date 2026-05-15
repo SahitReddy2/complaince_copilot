@@ -1,0 +1,54 @@
+industry: food
+display_name: "Food & Beverage"
+
+component_label: "ingredients"
+component_singular: "ingredient"
+
+law_frameworks:
+  - category: fda_food_labeling
+    name: "FDA Food Labeling (21 CFR 101)"
+    jurisdiction: US
+  - category: fda_gras
+    name: "FDA GRAS Substances"
+    jurisdiction: US
+  - category: usda_organic
+    name: "USDA Organic Standards"
+    jurisdiction: US
+  - category: ftc_food_advertising
+    name: "FTC Food Advertising Guidelines"
+    jurisdiction: US
+  - category: fda_food_allergens
+    name: "FALCPA Major Food Allergens"
+    jurisdiction: US
+
+claim_categories:
+  health: [heart healthy, lowers cholesterol, immune support, supports digestion]
+  nutrient_content: [low fat, low sodium, sugar free, high fiber, good source, excellent source]
+  structure_function: [supports, helps maintain, promotes]
+  natural_organic: [natural, organic, all natural, non-gmo, farm fresh]
+  allergen: [gluten-free, dairy-free, nut-free, allergen-free]
+  origin: [made in, locally sourced, grass-fed, free-range, wild-caught]
+
+component_severity_guide: |
+  - High: Major allergens (peanut, tree nut, milk, egg, wheat, soy, fish, shellfish, sesame),
+    banned/restricted additives, undeclared colors
+  - Medium: Artificial colors, preservatives requiring disclosure (sulfites, MSG, nitrites)
+  - Low: GRAS substances, common food ingredients
+
+claim_severity_guide: |
+  High-risk: disease prevention/treatment claims, unauthorized health claims
+  Medium-risk: structure/function claims without substantiation, "natural" claims
+  Low-risk: ingredient descriptions, basic nutrient content (when accurate)
+
+high_risk_components:
+  - peanut
+  - tree nut
+  - milk
+  - egg
+  - wheat
+  - soy
+  - fish
+  - shellfish
+  - sesame
+  - sulfite
+  - red dye 3

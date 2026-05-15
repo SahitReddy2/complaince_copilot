@@ -11,7 +11,7 @@ from backend.chunk import chunk_text
 
 # 1. Load API Key
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 
 # 2. Input directory
 CHUNK_DIR = "data/chunks"
@@ -25,7 +25,7 @@ def create_table():
         CREATE TABLE IF NOT EXISTS chunks (
             id SERIAL PRIMARY KEY,
             content TEXT,
-            embedding VECTOR(1536),
+            embedding VECTOR(768),
             chunk_index INTEGER,
             category TEXT,
             source_type TEXT,
@@ -40,7 +40,7 @@ def create_table():
 # 4. Embed text using OpenAI
 def get_embedding(text):
     response = client.embeddings.create(
-        model="text-embedding-3-small",
+        model="nomic-embed-text",
         input=text
     )
     return response.data[0].embedding

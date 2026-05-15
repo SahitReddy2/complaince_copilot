@@ -85,12 +85,8 @@ async def extract_ingredients(
     Extract ingredients from text using AI.
     """
     try:
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-        if not openai_api_key:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
-        extractor = IngredientExtractor(openai_api_key)
-        
+        extractor = IngredientExtractor()  # Uses local Ollama
+
         # Choose extraction method based on document type
         if request.document_type == "ingredient_list":
             ingredients = extractor.extract_from_ingredient_list(request.text)
@@ -114,12 +110,8 @@ async def extract_claims(
     Extract marketing claims from text using AI.
     """
     try:
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-        if not openai_api_key:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
-        extractor = ClaimExtractor(openai_api_key)
-        
+        extractor = ClaimExtractor()  # Uses local Ollama
+
         # Choose extraction method based on document type
         if request.document_type == "marketing_material":
             claims = extractor.extract_from_marketing_material(request.text)
@@ -138,6 +130,8 @@ async def extract_claims(
 async def analyze_document_comprehensive(
     file: UploadFile = File(...),
     jurisdiction: str = "US",
+    industry: str = "cosmetics",
+    jurisdictions: str = "US",  # Comma-separated list, e.g. "US,EU,UK"
     # db: Session = Depends(get_db)
 ):
     """
@@ -192,24 +186,20 @@ async def analyze_document_comprehensive(
             "compliance_analysis": {}
         }
         
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-        if not openai_api_key:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
         # Extract ingredients if document contains ingredient info
         if "ingredient" in text_response.extracted_text.lower() or document_type == "ingredient_list":
             try:
                 print("🧪 Attempting ingredient extraction...")
-                ingredient_extractor = IngredientExtractor(openai_api_key)
+                ingredient_extractor = IngredientExtractor()
                 ingredients = ingredient_extractor.extract_from_ingredient_list(text_response.extracted_text)
                 results["ingredients"] = [ingredient.dict() for ingredient in ingredients]
                 print(f"✅ Extracted {len(ingredients)} ingredients.")
             except Exception as e:
                 print(f"❌ Ingredient extraction failed: {e}")
                 traceback.print_exc()
-        
+
         if document_type != "ingredient_list":
-            claim_extractor = ClaimExtractor(openai_api_key)
+            claim_extractor = ClaimExtractor()
             claims = claim_extractor.extract(text_response.extracted_text)
             results["claims"] = [claim.dict() for claim in claims]
             print(f"✅ Extracted {len(claims)} claims.")
@@ -226,6 +216,8 @@ async def analyze_document_comprehensive(
             with tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json") as f:
                 ingredients_path = f.name
                 json.dump({
+                    "industry": industry,
+                    "jurisdictions": [j.strip() for j in jurisdictions.split(",") if j.strip()],
                     "ingredients": ingredient_names,
                     "claims": [claim["claim_text"] for claim in results["claims"]]
                 }, f)

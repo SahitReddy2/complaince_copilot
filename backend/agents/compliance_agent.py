@@ -6,8 +6,8 @@ from backend.extractors.ingredient_extractor import ExtractedIngredient
 from backend.extractors.claim_extractor import ExtractedClaim
 
 class ComplianceAgent:
-    def __init__(self, openai_api_key: str, db: Session):
-        self.client = openai.OpenAI(api_key=openai_api_key)
+    def __init__(self, openai_api_key: str = None, db: Session = None):
+        self.client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
         self.db = db
     
     def analyze_product_compliance(self, 
@@ -254,7 +254,7 @@ class ComplianceAgent:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4",
+                model="llama3.1:8b",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
                 max_tokens=1000
