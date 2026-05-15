@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C \"C:\\\\Users\\\\sahit\\\\OneDrive\\\\Desktop\\\\SAIL\\\\compliance copilot\" status)"
+      "Bash(git -C \"C:\\\\Users\\\\sahit\\\\OneDrive\\\\Desktop\\\\SAIL\\\\compliance copilot\" status)",
+      "PowerShell(gh auth status 2>&1)"
     ]
   }
 }
