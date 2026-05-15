@@ -1,0 +1,2817 @@
+[
+  {
+    "chemical": "bjindole)"
+  },
+  {
+    "chemical": "Abiraterone acetate"
+  },
+  {
+    "chemical": "Acetaldehyde"
+  },
+  {
+    "chemical": "Acetamide"
+  },
+  {
+    "chemical": "Acetazolamide"
+  },
+  {
+    "chemical": "Acetochlor"
+  },
+  {
+    "chemical": "Acetohydroxamic acid"
+  },
+  {
+    "chemical": "Acifluorfen sodium"
+  },
+  {
+    "chemical": "Acrylamide"
+  },
+  {
+    "chemical": "Acrylamide"
+  },
+  {
+    "chemical": "Acrylonitrile"
+  },
+  {
+    "chemical": "Actinomycin D"
+  },
+  {
+    "chemical": "Actinomycin D"
+  },
+  {
+    "chemical": "acrylamide"
+  },
+  {
+    "chemical": "Aflatoxins"
+  },
+  {
+    "chemical": "Alachlor"
+  },
+  {
+    "chemical": "Alcoholic beverages"
+  },
+  {
+    "chemical": "Alcoholic beverages, when"
+  },
+  {
+    "chemical": "associated with alcohol abuse"
+  },
+  {
+    "chemical": "Aldrin"
+  },
+  {
+    "chemical": "All-trans retinoic acid"
+  },
+  {
+    "chemical": "Aloe vera, non-decolorized whole"
+  },
+  {
+    "chemical": "leaf extract"
+  },
+  {
+    "chemical": "Alprazolam"
+  },
+  {
+    "chemical": "Altretamine"
+  },
+  {
+    "chemical": "Amantadine hydrochloride",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "665-66-7",
+    "date_listed": "February 27, 2001"
+  },
+  {
+    "chemical": "Amikacin sulfate"
+  },
+  {
+    "chemical": "p-Aminoazobenzene"
+  },
+  {
+    "chemical": "o-Aminoazotoluene"
+  },
+  {
+    "chemical": "anthraquinone"
+  },
+  {
+    "chemical": "hydrochloride"
+  },
+  {
+    "chemical": "Aminoglutethimide"
+  },
+  {
+    "chemical": "Aminoglycosides"
+  },
+  {
+    "chemical": "thiadiazole"
+  },
+  {
+    "chemical": "Aminopterin"
+  },
+  {
+    "chemical": "Amiodarone hydrochloride"
+  },
+  {
+    "chemical": "Amitraz"
+  },
+  {
+    "chemical": "Amitrole"
+  },
+  {
+    "chemical": "Amoxapine"
+  },
+  {
+    "chemical": "Amsacrine"
+  },
+  {
+    "chemical": "Anabolic steroids"
+  },
+  {
+    "chemical": "Analgesic mixtures containing"
+  },
+  {
+    "chemical": "phenacetin"
+  },
+  {
+    "chemical": "Androstenedione"
+  },
+  {
+    "chemical": "Angiotensin converting enzyme"
+  },
+  {
+    "chemical": "(ACE) inhibitors"
+  },
+  {
+    "chemical": "Aniline"
+  },
+  {
+    "chemical": "Aniline hydrochloride"
+  },
+  {
+    "chemical": "o-Anisidine"
+  },
+  {
+    "chemical": "o-Anisidine hydrochloride"
+  },
+  {
+    "chemical": "Anisindione"
+  },
+  {
+    "chemical": "Anthracene"
+  },
+  {
+    "chemical": "Anthraquinone"
+  },
+  {
+    "chemical": "Antimony oxide (Antimony trioxide)"
+  },
+  {
+    "chemical": "Aramite"
+  },
+  {
+    "chemical": "Areca nut"
+  },
+  {
+    "chemical": "Aristolochic acids"
+  },
+  {
+    "chemical": "Arsenic (inorganic arsenic"
+  },
+  {
+    "chemical": "compounds)"
+  },
+  {
+    "chemical": "Arsenic (inorganic oxides)"
+  },
+  {
+    "chemical": "Asbestos"
+  },
+  {
+    "chemical": "important not to use aspirin during"
+  },
+  {
+    "chemical": "the last three months of pregnancy,"
+  },
+  {
+    "chemical": "unless specifically directed to do so"
+  },
+  {
+    "chemical": "by a physician because it may"
+  },
+  {
+    "chemical": "cause problems in the unborn child"
+  },
+  {
+    "chemical": "Atenolol"
+  },
+  {
+    "chemical": "Atrazine",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "1912-24-9",
+    "date_listed": "July 15, 2016"
+  },
+  {
+    "chemical": "Auramine"
+  },
+  {
+    "chemical": "Auranofin"
+  },
+  {
+    "chemical": "Azacitidine"
+  },
+  {
+    "chemical": "Azaserine"
+  },
+  {
+    "chemical": "Azathioprine"
+  },
+  {
+    "chemical": "Azathioprine"
+  },
+  {
+    "chemical": "Azobenzene"
+  },
+  {
+    "chemical": "Barbiturates"
+  },
+  {
+    "chemical": "Beclomethasone dipropionate"
+  },
+  {
+    "chemical": "Benomyl"
+  },
+  {
+    "chemical": "Benthiavalicarb-isopropyl"
+  },
+  {
+    "chemical": "Benzene"
+  },
+  {
+    "chemical": "Benzene"
+  },
+  {
+    "chemical": "Benzidine-based dyes"
+  },
+  {
+    "chemical": "Benzodiazepines"
+  },
+  {
+    "chemical": "Benzofuran"
+  },
+  {
+    "chemical": "Benzophenone"
+  },
+  {
+    "chemical": "Benzotrichloride"
+  },
+  {
+    "chemical": "Benzphetamine hydrochloride"
+  },
+  {
+    "chemical": "Benzyl chloride"
+  },
+  {
+    "chemical": "Beryllium and beryllium compounds"
+  },
+  {
+    "chemical": "Betel quid with tobacco"
+  },
+  {
+    "chemical": "Betel quid without tobacco"
+  },
+  {
+    "chemical": "Bevacizumab"
+  },
+  {
+    "chemical": "propanediol"
+  },
+  {
+    "chemical": "naphthylamine (Chlornapazine)"
+  },
+  {
+    "chemical": "Bischloroethyl nitrosourea (BCNU)"
+  },
+  {
+    "chemical": "(Carmustine)"
+  },
+  {
+    "chemical": "Bischloroethyl nitrosourea (BCNU)"
+  },
+  {
+    "chemical": "(Carmustine)"
+  },
+  {
+    "chemical": "Bis(chloromethyl)ether"
+  },
+  {
+    "chemical": "technical grade"
+  },
+  {
+    "chemical": "Bisphenol A (BPA)"
+  },
+  {
+    "chemical": "Bisphenol A (BPA)"
+  },
+  {
+    "chemical": "Bisphenol S (BPS)"
+  },
+  {
+    "chemical": "Bisphenol S (BPS)"
+  },
+  {
+    "chemical": "Bitumens, extracts of steam-refined"
+  },
+  {
+    "chemical": "and air refined"
+  },
+  {
+    "chemical": "Bracken fern"
+  },
+  {
+    "chemical": "Bromacil lithium salt"
+  },
+  {
+    "chemical": "Bromacil lithium salt"
+  },
+  {
+    "chemical": "Bromate"
+  },
+  {
+    "chemical": "Bromochloroacetic acid",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "5589-96-8",
+    "date_listed": "April 6, 2010"
+  },
+  {
+    "chemical": "Bromodichloroacetic acid"
+  },
+  {
+    "chemical": "Bromodichloromethane"
+  },
+  {
+    "chemical": "Bromoethane"
+  },
+  {
+    "chemical": "Bromoform"
+  },
+  {
+    "chemical": "Bromoxynil"
+  },
+  {
+    "chemical": "Bromoxynil octanoate"
+  },
+  {
+    "chemical": "Butabarbital sodium"
+  },
+  {
+    "chemical": "(Busulfan)"
+  },
+  {
+    "chemical": "(Busulfan)"
+  },
+  {
+    "chemical": "Butylated hydroxyanisole"
+  },
+  {
+    "chemical": "Butyl benzyl phthalate (BBP)"
+  },
+  {
+    "chemical": "beta-Butyrolactone"
+  },
+  {
+    "chemical": "Cacodylic acid"
+  },
+  {
+    "chemical": "Cadmium"
+  },
+  {
+    "chemical": "Cadmium and cadmium compounds"
+  },
+  {
+    "chemical": "Caffeic acid"
+  },
+  {
+    "chemical": "Cannabis (marijuana) smoke"
+  },
+  {
+    "chemical": "Captafol"
+  },
+  {
+    "chemical": "Captan"
+  },
+  {
+    "chemical": "Carbamazepine"
+  },
+  {
+    "chemical": "Carbaryl"
+  },
+  {
+    "chemical": "Carbaryl"
+  },
+  {
+    "chemical": "Carbazole"
+  },
+  {
+    "chemical": "Carbon black (airborne, unbound"
+  },
+  {
+    "chemical": "particles of respirable size)"
+  },
+  {
+    "chemical": "Carbon-black extracts"
+  },
+  {
+    "chemical": "Carbon disulfide"
+  },
+  {
+    "chemical": "Carbon monoxide"
+  },
+  {
+    "chemical": "Carbon tetrachloride"
+  },
+  {
+    "chemical": "Carboplatin"
+  },
+  {
+    "chemical": "N-Carboxymethyl-N-nitrosourea"
+  },
+  {
+    "chemical": "Catechol"
+  },
+  {
+    "chemical": "Ceramic fibers (airborne particles of"
+  },
+  {
+    "chemical": "respirable size)"
+  },
+  {
+    "chemical": "Certain combined chemotherapy for"
+  },
+  {
+    "chemical": "lymphomas"
+  },
+  {
+    "chemical": "Chenodiol"
+  },
+  {
+    "chemical": "Chloral"
+  },
+  {
+    "chemical": "Chloral hydrate",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "302-17-0",
+    "date_listed": "September 13, 2013"
+  },
+  {
+    "chemical": "Chlorambucil"
+  },
+  {
+    "chemical": "Chlorambucil"
+  },
+  {
+    "chemical": "Chloramphenicol sodium succinate"
+  },
+  {
+    "chemical": "Chlorcyclizine hydrochloride"
+  },
+  {
+    "chemical": "Chlordane"
+  },
+  {
+    "chemical": "Chlordecone (Kepone)"
+  },
+  {
+    "chemical": "Chlordecone (Kepone)"
+  },
+  {
+    "chemical": "Chlordiazepoxide"
+  },
+  {
+    "chemical": "Chlordiazepoxide hydrochloride"
+  },
+  {
+    "chemical": "Chlordimeform"
+  },
+  {
+    "chemical": "Chlorendic acid"
+  },
+  {
+    "chemical": "Chlorinated paraffins (Average"
+  },
+  {
+    "chemical": "p-Chloroaniline"
+  },
+  {
+    "chemical": "p-Chloroaniline hydrochloride"
+  },
+  {
+    "chemical": "Chloredibromoemethane",
+    "date_listed": "October 29, 1999"
+  },
+  {
+    "chemical": "Chloroethane (Ethyl chloride)"
+  },
+  {
+    "chemical": "nitrosourea (CCNU) (Lomustine)"
+  },
+  {
+    "chemical": "nitrosourea (CCNU) Lomustine)"
+  },
+  {
+    "chemical": "Chloroform"
+  },
+  {
+    "chemical": "Chloroform"
+  },
+  {
+    "chemical": "(technical grade)"
+  },
+  {
+    "chemical": "Chloroprene"
+  },
+  {
+    "chemical": "Chlorothalonil"
+  },
+  {
+    "chemical": "p-Chloro-o-toluidine"
+  },
+  {
+    "chemical": "p-Chloro-o-toluidine, strong acid"
+  },
+  {
+    "chemical": "salts of"
+  },
+  {
+    "chemical": "acid salts"
+  },
+  {
+    "chemical": "Chlorotrianisene"
+  },
+  {
+    "chemical": "p-chloro-a,a,a-trifluorotoluene"
+  },
+  {
+    "chemical": "(para-Chlorobenzotrifluoride,"
+  },
+  {
+    "chemical": "Chlorozotocin"
+  },
+  {
+    "chemical": "Chlorpyrifos"
+  },
+  {
+    "chemical": "Chlorsulfuren"
+  },
+  {
+    "chemical": "Chromium (hexavalent compounds)"
+  },
+  {
+    "chemical": "Chromium (hexavalent compounds)"
+  },
+  {
+    "chemical": "Chrysene"
+  },
+  {
+    "chemical": "Type of Toxicit",
+    "toxicity": [
+      "cancer",
+      "developmental"
+    ]
+  },
+  {
+    "chemical": "GanAcer",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "218-01-9",
+    "date_listed": "January 1, 1990"
+  },
+  {
+    "chemical": "Cyclosporine)"
+  },
+  {
+    "chemical": "Cidofovir"
+  },
+  {
+    "chemical": "Cisplatin"
+  },
+  {
+    "chemical": "Cladribine"
+  },
+  {
+    "chemical": "Clarithromycin"
+  },
+  {
+    "chemical": "Clobetasol propionate"
+  },
+  {
+    "chemical": "Clofibrate"
+  },
+  {
+    "chemical": "Clomiphene citrate"
+  },
+  {
+    "chemical": "Clomiphene citrate"
+  },
+  {
+    "chemical": "Clorazepate dipotassium"
+  },
+  {
+    "chemical": "CMNP (pyrazachior)"
+  },
+  {
+    "chemical": "Coal-tar pitch"
+  },
+  {
+    "chemical": "Cobalt metal powder"
+  },
+  {
+    "chemical": "Cobalt sulfate"
+  },
+  {
+    "chemical": "Cobalt sulfate heptahydrate"
+  },
+  {
+    "chemical": "Cocaine"
+  },
+  {
+    "chemical": "Coconut oil diethanolamine"
+  },
+  {
+    "chemical": "condensate (cocamide"
+  },
+  {
+    "chemical": "diethanolamine)"
+  },
+  {
+    "chemical": "Codeine phosphate"
+  },
+  {
+    "chemical": "Coke oven emissions"
+  },
+  {
+    "chemical": "Colchicine"
+  },
+  {
+    "chemical": "Conjugated estrogens"
+  },
+  {
+    "chemical": "Conjugated estrogens"
+  },
+  {
+    "chemical": "Creosotes"
+  },
+  {
+    "chemical": "p-Cresidine"
+  },
+  {
+    "chemical": "Cumene"
+  },
+  {
+    "chemical": "Cupferron"
+  },
+  {
+    "chemical": "Cyanazine"
+  },
+  {
+    "chemical": "Cycloate"
+  },
+  {
+    "chemical": "Cycloheximide"
+  },
+  {
+    "chemical": "Cyclophosphamide (anhydrous)"
+  },
+  {
+    "chemical": "Cyclophosphamide (anhydrous)"
+  },
+  {
+    "chemical": "Cyclophosphamide (hydrated)"
+  },
+  {
+    "chemical": "Cyclophosphamide (hydrated)"
+  },
+  {
+    "chemical": "Cyhexatin"
+  },
+  {
+    "chemical": "Cytarabine"
+  },
+  {
+    "chemical": "Cytembena",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "mate",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "21739-91-3",
+    "date_listed": "May 15, 1998"
+  },
+  {
+    "chemical": "Dacarbazine"
+  },
+  {
+    "chemical": "Dacarbazine"
+  },
+  {
+    "chemical": "Daminozide"
+  },
+  {
+    "chemical": "Danazol"
+  },
+  {
+    "chemical": "Dihydroxyanthraquinone)"
+  },
+  {
+    "chemical": "Daunomycin"
+  },
+  {
+    "chemical": "Daunorubicin hydrochloride"
+  },
+  {
+    "chemical": "DDD (Dichlorodiphenyl-"
+  },
+  {
+    "chemical": "dichloroethane)"
+  },
+  {
+    "chemical": "DDE (Dichlorodi-"
+  },
+  {
+    "chemical": "phenyldichloroethylene)"
+  },
+  {
+    "chemical": "DDT (Dichlorodi-"
+  },
+  {
+    "chemical": "phenyltrichloroethane)"
+  },
+  {
+    "chemical": "o,p'-DDT"
+  },
+  {
+    "chemical": "DDVP (Dichlorvos)"
+  },
+  {
+    "chemical": "Demeclocycline hydrochloride"
+  },
+  {
+    "chemical": "(internal use)"
+  },
+  {
+    "chemical": "Des-ethyl atrazine (DEA)"
+  },
+  {
+    "chemical": "Des-isopropyl atrazine (DIA)"
+  },
+  {
+    "chemical": "Oxydianiline)"
+  },
+  {
+    "chemical": "Diazepam"
+  },
+  {
+    "chemical": "Diazoaminobenzene"
+  },
+  {
+    "chemical": "Diazoxide"
+  },
+  {
+    "chemical": "Dibenzanthracenes"
+  },
+  {
+    "chemical": "Dibromoacetic acid"
+  },
+  {
+    "chemical": "Dibromoacetonitrile"
+  },
+  {
+    "chemical": "GanAcer",
+    "toxicity": [
+      "cancer",
+      "developmental"
+    ],
+    "cas": "96-12-8",
+    "date_listed": "July 1, 1987"
+  },
+  {
+    "chemical": "dihydrochloride",
+    "toxicity": [
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "chlorophenyl)ethylene (DDE)",
+    "toxicity": [
+      "cancer"
+    ]
+  },
+  {
+    "chemical": "ether",
+    "toxicity": [
+      "cancer"
+    ]
+  },
+  {
+    "chemical": "chloride)",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "Dianisidine)",
+    "toxicity": [
+      "cancer"
+    ]
+  },
+  {
+    "chemical": "dihydrochloride"
+  },
+  {
+    "chemical": "dimethoxybenzidine"
+  },
+  {
+    "chemical": "N,N-Dimethylacetamide"
+  },
+  {
+    "chemical": "N,N-Dimethylacetamide"
+  },
+  {
+    "chemical": "Tolidine)"
+  },
+  {
+    "chemical": "dimethylbenzidine"
+  },
+  {
+    "chemical": "dihydrochloride"
+  },
+  {
+    "chemical": "Dimethylcarbamoyl chloride"
+  },
+  {
+    "chemical": "N,N-Dimethylformamide"
+  },
+  {
+    "chemical": "Dimethyl hydrogen phosphite"
+  },
+  {
+    "chemical": "Dimethyl sulfate"
+  },
+  {
+    "chemical": "N,N-Dimethyl-p-toluidine"
+  },
+  {
+    "chemical": "Dimethylvinylchloride"
+  },
+  {
+    "chemical": "m-Dinitrobenzene"
+  },
+  {
+    "chemical": "o-Dinitrobenzene"
+  },
+  {
+    "chemical": "p-Dinitrobenzene"
+  },
+  {
+    "chemical": "Dinitrotoluene (technical grade)"
+  },
+  {
+    "chemical": "Dinocap"
+  },
+  {
+    "chemical": "Dinoseb"
+  },
+  {
+    "chemical": "Di-n-propyl isocinchomeronate"
+  },
+  {
+    "chemical": "Diphenylhydantoin (Phenytoin)"
+  },
+  {
+    "chemical": "Diphenylhydantoin (Phenytoin)"
+  },
+  {
+    "chemical": "Diphenylhydantoin (Phenytoin),"
+  },
+  {
+    "chemical": "sodium salt"
+  },
+  {
+    "chemical": "Disodium cyanodithioimido-"
+  },
+  {
+    "chemical": "carbonate"
+  },
+  {
+    "chemical": "Diuron"
+  },
+  {
+    "chemical": "Doxorubicin hydrochloride"
+  },
+  {
+    "chemical": "(Adriamycin)"
+  },
+  {
+    "chemical": "Doxorubicin hydrochloride"
+  },
+  {
+    "chemical": "(Adriamycin)"
+  },
+  {
+    "chemical": "Doxycycline (internal use)"
+  },
+  {
+    "chemical": "Doxycycline calcium (internal use)"
+  },
+  {
+    "chemical": "Doxycycline hyclate (internal use)"
+  },
+  {
+    "chemical": "Doxycycline monohydrate (internal"
+  },
+  {
+    "chemical": "use)"
+  },
+  {
+    "chemical": "Emissions from combustion of coal"
+  },
+  {
+    "chemical": "Emissions from high-temperature"
+  },
+  {
+    "chemical": "unrefined rapeseed oil"
+  },
+  {
+    "chemical": "Endrin"
+  },
+  {
+    "chemical": "Environmental tobacco smoke"
+  },
+  {
+    "chemical": "Epichlorohydrin"
+  },
+  {
+    "chemical": "Epichlorohydrin"
+  },
+  {
+    "chemical": "Epoxiconazole"
+  },
+  {
+    "chemical": "Ergotamine tartrate"
+  },
+  {
+    "chemical": "Erionite"
+  },
+  {
+    "chemical": "Estragole"
+  },
+  {
+    "chemical": "Estrogens, steroidal"
+  },
+  {
+    "chemical": "Estrogen-progestogen (combined)"
+  },
+  {
+    "chemical": "used as menopausal therapy"
+  },
+  {
+    "chemical": "Estrone"
+  },
+  {
+    "chemical": "Estropipate"
+  },
+  {
+    "chemical": "Ethinylestradiol"
+  },
+  {
+    "chemical": "Ethionamide"
+  },
+  {
+    "chemical": "Ethoprop"
+  },
+  {
+    "chemical": "Ethyl acrylate"
+  },
+  {
+    "chemical": "Ethyl alcohol in alcoholic beverages"
+  },
+  {
+    "chemical": "Ethylbenzene"
+  },
+  {
+    "chemical": "Ethyl dipropylthiocarbamate"
+  },
+  {
+    "chemical": "Ethylene dibromide"
+  },
+  {
+    "chemical": "Ethylene dibromide"
+  },
+  {
+    "chemical": "Dichloroethane)"
+  },
+  {
+    "chemical": "Ethylene glycol (ingested)"
+  },
+  {
+    "chemical": "Ethylene glycol monoethyl ether"
+  },
+  {
+    "chemical": "Ethylene glycol monoethyl ether"
+  },
+  {
+    "chemical": "acetate"
+  },
+  {
+    "chemical": "Ethylene glycol monomethyl ether"
+  },
+  {
+    "chemical": "Ethylene glycol monomethyl ether"
+  },
+  {
+    "chemical": "acetate"
+  },
+  {
+    "chemical": "Ethyleneimine (Aziridine)"
+  },
+  {
+    "chemical": "Ethylene oxide"
+  },
+  {
+    "chemical": "Ethylene oxide",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "develoomental",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "mate",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "Ethylene oxide"
+  },
+  {
+    "chemical": "Ethylene thiourea"
+  },
+  {
+    "chemical": "Ethylene thiourea",
+    "date_listed": "December 13, 2013"
+  },
+  {
+    "chemical": "Ethyl methanesulfonate"
+  },
+  {
+    "chemical": "Etodolac"
+  },
+  {
+    "chemical": "Etoposide"
+  },
+  {
+    "chemical": "Etoposide"
+  },
+  {
+    "chemical": "Etoposide in combination with"
+  },
+  {
+    "chemical": "cisplatin and bleomycin"
+  },
+  {
+    "chemical": "Etretinate"
+  },
+  {
+    "chemical": "Fenoxaprop ethyl"
+  },
+  {
+    "chemical": "Fenoxycarb"
+  },
+  {
+    "chemical": "Filgrastim"
+  },
+  {
+    "chemical": "Fluazifop butyl"
+  },
+  {
+    "chemical": "Flunisolide"
+  },
+  {
+    "chemical": "Fluoro-edenite fibrous amphibole"
+  },
+  {
+    "chemical": "Fluorouracil"
+  },
+  {
+    "chemical": "Fluoxymesterone"
+  },
+  {
+    "chemical": "Flurazepam hydrochloride"
+  },
+  {
+    "chemical": "Flurbiprofen"
+  },
+  {
+    "chemical": "Flutamide"
+  },
+  {
+    "chemical": "Fluvalinate"
+  },
+  {
+    "chemical": "Folpet"
+  },
+  {
+    "chemical": "Formaldehyde (gas)"
+  },
+  {
+    "chemical": "furyl)thiazole"
+  },
+  {
+    "chemical": "Fumonisin Bi"
+  },
+  {
+    "chemical": "Furan"
+  },
+  {
+    "chemical": "Furazolidone"
+  },
+  {
+    "chemical": "Furfuryl alcohol"
+  },
+  {
+    "chemical": "Furmecyclox"
+  },
+  {
+    "chemical": "Fusarin C"
+  },
+  {
+    "chemical": "Gallium arsenide"
+  },
+  {
+    "chemical": "Ganciclovir"
+  },
+  {
+    "chemical": "Ganciclovir sodium"
+  },
+  {
+    "chemical": "Gasoline engine exhaust"
+  },
+  {
+    "chemical": "Gemfibrozil"
+  },
+  {
+    "chemical": "Gemfibrozil"
+  },
+  {
+    "chemical": "Gentian violet (Crystal violet)"
+  },
+  {
+    "chemical": "Glass wool fibers"
+  },
+  {
+    "chemical": "(inhalable and biopersistent)"
+  },
+  {
+    "chemical": "Glycidaldehyde"
+  },
+  {
+    "chemical": "Glycidol"
+  },
+  {
+    "chemical": "Glycidyl methacrylate",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "106-91-2",
+    "date_listed": "January 27, 2023"
+  },
+  {
+    "chemical": "Glyphosate"
+  },
+  {
+    "chemical": "Goldenseal root powder"
+  },
+  {
+    "chemical": "Goserelin acetate"
+  },
+  {
+    "chemical": "Griseofulvin"
+  },
+  {
+    "chemical": "Gyromitrin (Acetaldehyde"
+  },
+  {
+    "chemical": "methylformylhydrazone)"
+  },
+  {
+    "chemical": "Halazepam"
+  },
+  {
+    "chemical": "Halobetasol propionate"
+  },
+  {
+    "chemical": "Haloperidol"
+  },
+  {
+    "chemical": "Halothane"
+  },
+  {
+    "chemical": "Heptachlor"
+  },
+  {
+    "chemical": "Heptachlor"
+  },
+  {
+    "chemical": "Heptachlor epoxide"
+  },
+  {
+    "chemical": "Herbal remedies containing plant"
+  },
+  {
+    "chemical": "species of the genus Aristolochia"
+  },
+  {
+    "chemical": "Hexachlorobenzene"
+  },
+  {
+    "chemical": "Hexachlorobenzene"
+  },
+  {
+    "chemical": "Hexachlorobutadiene"
+  },
+  {
+    "chemical": "Hexachlorocyclohexane (technical"
+  },
+  {
+    "chemical": "grade)"
+  },
+  {
+    "chemical": "Hexachlorodibenzodioxin"
+  },
+  {
+    "chemical": "Hexachloroethane"
+  },
+  {
+    "chemical": "Hexafluoroacetone"
+  },
+  {
+    "chemical": "Hexamethylphosphoramide"
+  },
+  {
+    "chemical": "Hexamethylphosphoramide"
+  },
+  {
+    "chemical": "n-Hexane"
+  },
+  {
+    "chemical": "Histrelin acetate"
+  },
+  {
+    "chemical": "Hydramethylnon"
+  },
+  {
+    "chemical": "Hydrazine"
+  },
+  {
+    "chemical": "Hydrazine sulfate"
+  },
+  {
+    "chemical": "Diphenylhydrazine)"
+  },
+  {
+    "chemical": "Hydrogen cyanide (HCN) and"
+  },
+  {
+    "chemical": "cyanide salts (CN salts)"
+  },
+  {
+    "chemical": "Hydroxyurea"
+  },
+  {
+    "chemical": "Idarubicin hydrochloride"
+  },
+  {
+    "chemical": "Ifosfamide"
+  },
+  {
+    "chemical": "Imazailil"
+  },
+  {
+    "chemical": "Indium phosphide"
+  },
+  {
+    "chemical": "Indium tin oxide"
+  },
+  {
+    "chemical": "quinoline)"
+  },
+  {
+    "chemical": "lprodione"
+  },
+  {
+    "chemical": "Ilprovalicarb"
+  },
+  {
+    "chemical": "lron dextran complex",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "9004-66-4",
+    "date_listed": "January 1, 1988"
+  },
+  {
+    "chemical": "Isobutyl nitrite"
+  },
+  {
+    "chemical": "Isoprene"
+  },
+  {
+    "chemical": "Isopyrazam"
+  },
+  {
+    "chemical": "Isotretinoin"
+  },
+  {
+    "chemical": "lsoxaflutole"
+  },
+  {
+    "chemical": "Kresoxim-methyl"
+  },
+  {
+    "chemical": "Lactofen"
+  },
+  {
+    "chemical": "Lasiocarpine"
+  },
+  {
+    "chemical": "Lead"
+  },
+  {
+    "chemical": "Lead and lead compounds"
+  },
+  {
+    "chemical": "Lead acetate"
+  },
+  {
+    "chemical": "Lead phosphate"
+  },
+  {
+    "chemical": "Lead subacetate"
+  },
+  {
+    "chemical": "Leather dust"
+  },
+  {
+    "chemical": "Leucomalachite green"
+  },
+  {
+    "chemical": "Leuprolide acetate"
+  },
+  {
+    "chemical": "Levodopa"
+  },
+  {
+    "chemical": "Levonorgestrel implants"
+  },
+  {
+    "chemical": "Lindane and other hexachloro-"
+  },
+  {
+    "chemical": "cyclohexane isomers"
+  },
+  {
+    "chemical": "Linuron"
+  },
+  {
+    "chemical": "Lithium carbonate"
+  },
+  {
+    "chemical": "Lithium citrate"
+  },
+  {
+    "chemical": "Lorazepam"
+  },
+  {
+    "chemical": "Lovastatin"
+  },
+  {
+    "chemical": "Lynestrenol"
+  },
+  {
+    "chemical": "Malathion"
+  },
+  {
+    "chemical": "Malonaldehyde, sodium salt"
+  },
+  {
+    "chemical": "Mancozeb"
+  },
+  {
+    "chemical": "Maneb"
+  },
+  {
+    "chemical": "Marijuana smoke"
+  },
+  {
+    "chemical": "Mebendazole"
+  },
+  {
+    "chemical": "Medroxyprogesterone acetate"
+  },
+  {
+    "chemical": "Medroxyprogesterone acetate"
+  },
+  {
+    "chemical": "Megestrol acetate"
+  },
+  {
+    "chemical": "Megestrol acetate"
+  },
+  {
+    "chemical": "Melphalan"
+  },
+  {
+    "chemical": "Melphalan"
+  },
+  {
+    "chemical": "Menotropins"
+  },
+  {
+    "chemical": "Mepanipyrim"
+  },
+  {
+    "chemical": "Meprobamate",
+    "toxicity": [
+      "cancer"
+    ]
+  },
+  {
+    "chemical": "Gancer",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "149-30-4",
+    "date_listed": "October 27, 2017"
+  },
+  {
+    "chemical": "Mercaptopurine"
+  },
+  {
+    "chemical": "Mercury and mercury compounds"
+  },
+  {
+    "chemical": "Merphalan"
+  },
+  {
+    "chemical": "Mestranol"
+  },
+  {
+    "chemical": "Metam potassium"
+  },
+  {
+    "chemical": "Methacycline hydrochloride"
+  },
+  {
+    "chemical": "Metham sodium"
+  },
+  {
+    "chemical": "Metham sodium"
+  },
+  {
+    "chemical": "Methanol"
+  },
+  {
+    "chemical": "Methazole"
+  },
+  {
+    "chemical": "Methimazole"
+  },
+  {
+    "chemical": "Methotrexate"
+  },
+  {
+    "chemical": "Methotrexate sodium"
+  },
+  {
+    "chemical": "A therapy"
+  },
+  {
+    "chemical": "A therapy"
+  },
+  {
+    "chemical": "Methyl acrylate"
+  },
+  {
+    "chemical": "Methylazoxymethanol"
+  },
+  {
+    "chemical": "Methylazoxymethanol acetate"
+  },
+  {
+    "chemical": "Methyl bromide, as a structural"
+  },
+  {
+    "chemical": "fumigant"
+  },
+  {
+    "chemical": "Methyl carbamate"
+  },
+  {
+    "chemical": "Methyl chloride"
+  },
+  {
+    "chemical": "Methyl chloride"
+  },
+  {
+    "chemical": "benzenamine"
+  },
+  {
+    "chemical": "dihydrochloride"
+  },
+  {
+    "chemical": "Methyleugenol"
+  },
+  {
+    "chemical": "Methylhydrazine and its salts"
+  },
+  {
+    "chemical": "Methyl iodide"
+  },
+  {
+    "chemical": "Methyl isobutyl ketone"
+  },
+  {
+    "chemical": "Methyl isobutyl ketone (MIBK)"
+  },
+  {
+    "chemical": "Methyl isocyanate (MIC)"
+  },
+  {
+    "chemical": "Methyl mercury"
+  },
+  {
+    "chemical": "Methylmercury compounds"
+  },
+  {
+    "chemical": "Methyl methanesulfonate"
+  },
+  {
+    "chemical": "Methyl-n-butyl ketone"
+  },
+  {
+    "chemical": "Methyl-n-butyl ketone"
+  },
+  {
+    "chemical": "uncertain purity)"
+  },
+  {
+    "chemical": "N-Methyl-N'-nitro-N-"
+  },
+  {
+    "chemical": "nitrosoguanidine"
+  },
+  {
+    "chemical": "N-Methylolacrylamide"
+  },
+  {
+    "chemical": "N-Methylpyrrolidone",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "872-50-4",
+    "date_listed": "June 15, 2001"
+  },
+  {
+    "chemical": "a-Methyl styrene (alpha-"
+  },
+  {
+    "chemical": "Methylstyrene)"
+  },
+  {
+    "chemical": "Methyltestosterone"
+  },
+  {
+    "chemical": "Methylthiouracil"
+  },
+  {
+    "chemical": "Metiram"
+  },
+  {
+    "chemical": "Metiram"
+  },
+  {
+    "chemical": "Metronidazole"
+  },
+  {
+    "chemical": "Michler's ketone"
+  },
+  {
+    "chemical": "Midazolam hydrochloride"
+  },
+  {
+    "chemical": "Minocycline hydrochloride (internal"
+  },
+  {
+    "chemical": "use)"
+  },
+  {
+    "chemical": "Mirex"
+  },
+  {
+    "chemical": "Misoprostol"
+  },
+  {
+    "chemical": "Mitomycin C"
+  },
+  {
+    "chemical": "Mitoxantrone hydrochloride"
+  },
+  {
+    "chemical": "Mitoxantrone hydrochloride"
+  },
+  {
+    "chemical": "Molinate"
+  },
+  {
+    "chemical": "Molybdenum trioxide"
+  },
+  {
+    "chemical": "Monocrotaline"
+  },
+  {
+    "chemical": "MOPP (vincristine-prednisone-"
+  },
+  {
+    "chemical": "nitrogen mustard-procarbazine"
+  },
+  {
+    "chemical": "mixture)"
+  },
+  {
+    "chemical": "oxazolidinone"
+  },
+  {
+    "chemical": "Mustard Gas"
+  },
+  {
+    "chemical": "Myclobutanil"
+  },
+  {
+    "chemical": "beta-Myrcene"
+  },
+  {
+    "chemical": "Nabam"
+  },
+  {
+    "chemical": "Nafarelin acetate"
+  },
+  {
+    "chemical": "Nafenopin"
+  },
+  {
+    "chemical": "Nalidixic acid"
+  },
+  {
+    "chemical": "Naphthalene"
+  },
+  {
+    "chemical": "Neomycin sulfate (internal use)"
+  },
+  {
+    "chemical": "Netilmicin sulfate"
+  },
+  {
+    "chemical": "Nickel (Metallic)"
+  },
+  {
+    "chemical": "Nickel acetate"
+  },
+  {
+    "chemical": "Nickel carbonate"
+  },
+  {
+    "chemical": "Nickel carbonyl"
+  },
+  {
+    "chemical": "Nickel carbonyl"
+  },
+  {
+    "chemical": "Nickel compounds"
+  },
+  {
+    "chemical": "Nickel (soluble compounds)",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "13463-39-3",
+    "date_listed": "October 26, 2018"
+  },
+  {
+    "chemical": "Nickel hydroxide"
+  },
+  {
+    "chemical": "Nickelocene"
+  },
+  {
+    "chemical": "Nickel oxide"
+  },
+  {
+    "chemical": "Nickel refinery dust from the"
+  },
+  {
+    "chemical": "pyrometallurgical process"
+  },
+  {
+    "chemical": "Nickel subsulfide"
+  },
+  {
+    "chemical": "Nicotine"
+  },
+  {
+    "chemical": "Nifedipine"
+  },
+  {
+    "chemical": "Nimodipine"
+  },
+  {
+    "chemical": "Niridazole"
+  },
+  {
+    "chemical": "Nitrapyrin"
+  },
+  {
+    "chemical": "Nitrapyrin"
+  },
+  {
+    "chemical": "Nitrilotriacetic acid"
+  },
+  {
+    "chemical": "Nitrilotriacetic acid, trisodium salt"
+  },
+  {
+    "chemical": "monohydrate",
+    "date_listed": "December 8, 2006"
+  },
+  {
+    "chemical": "o-Nitroanisole"
+  },
+  {
+    "chemical": "para-Nitroanisole"
+  },
+  {
+    "chemical": "Nitrobenzene"
+  },
+  {
+    "chemical": "Nitrobenzene"
+  },
+  {
+    "chemical": "Nitrofen (technical grade)"
+  },
+  {
+    "chemical": "Nitrofurantoin"
+  },
+  {
+    "chemical": "Nitrofurazone"
+  },
+  {
+    "chemical": "imidazolidinone"
+  },
+  {
+    "chemical": "acetamide"
+  },
+  {
+    "chemical": "Nitrogen mustard"
+  },
+  {
+    "chemical": "(Mechlorethamine)"
+  },
+  {
+    "chemical": "Nitrogen mustard"
+  },
+  {
+    "chemical": "(Mechlorethamine)"
+  },
+  {
+    "chemical": "Nitrogen mustard hydrochloride"
+  },
+  {
+    "chemical": "(Mechlorethamine hydrochloride)"
+  },
+  {
+    "chemical": "Nitrogen mustard hydrochloride"
+  },
+  {
+    "chemical": "(Mechlorethamine hydrochloride)"
+  },
+  {
+    "chemical": "Nitrogen mustard N-oxide"
+  },
+  {
+    "chemical": "Nitrogen mustard N-oxide"
+  },
+  {
+    "chemical": "hydrochloride"
+  },
+  {
+    "chemical": "Nitromethane"
+  },
+  {
+    "chemical": "N-Nitrosodi-n-butylamine"
+  },
+  {
+    "chemical": "N-Nitrosodiethanolamine"
+  },
+  {
+    "chemical": "N-Nitrosodiethylamine"
+  },
+  {
+    "chemical": "N-Nitrosodimethylamine"
+  },
+  {
+    "chemical": "p-Nitrosodiphenylamine"
+  },
+  {
+    "chemical": "N-Nitrosodiphenylamine"
+  },
+  {
+    "chemical": "N-Nitrosodi-n-propylamine",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "Gancer",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "621-64-7",
+    "date_listed": "January 1, 1988"
+  },
+  {
+    "chemical": "N-Nitroso-N-ethylurea"
+  },
+  {
+    "chemical": "N-Nitrosohexamethyleneimine"
+  },
+  {
+    "chemical": "propionitrile"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-butylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-decylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-dodecylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethylethylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-heptylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-hexylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-nonylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-octylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-pentylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-propylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-tetradecylamine"
+  },
+  {
+    "chemical": "N-Nitrosomethyl-n-undecylamine"
+  },
+  {
+    "chemical": "N-Nitroso-N-methylurea"
+  },
+  {
+    "chemical": "N-Nitroso-N-methylurethane"
+  },
+  {
+    "chemical": "N-Nitrosomethylvinylamine"
+  },
+  {
+    "chemical": "N-Nitrosomorpholine"
+  },
+  {
+    "chemical": "N-Nitrosonornicotine"
+  },
+  {
+    "chemical": "N-Nitrosopiperidine"
+  },
+  {
+    "chemical": "N-Nitrosopyrrolidine"
+  },
+  {
+    "chemical": "N-Nitrososarcosine"
+  },
+  {
+    "chemical": "o-Nitrotoluene"
+  },
+  {
+    "chemical": "Nitrous oxide"
+  },
+  {
+    "chemical": "Norethisterone (Norethindrone)"
+  },
+  {
+    "chemical": "Norethisterone (Norethindrone)"
+  },
+  {
+    "chemical": "Norethisterone acetate"
+  },
+  {
+    "chemical": "(Norethindrone acetate)"
+  },
+  {
+    "chemical": "Norethisterone (Norethindrone)"
+  },
+  {
+    "chemical": "Mestranol"
+  },
+  {
+    "chemical": "Norethynodrel"
+  },
+  {
+    "chemical": "Norgestrel"
+  },
+  {
+    "chemical": "Ochratoxin A"
+  },
+  {
+    "chemical": "Oil Orange SS"
+  },
+  {
+    "chemical": "Oral contraceptives, combined"
+  },
+  {
+    "chemical": "Oral contraceptives, sequential"
+  },
+  {
+    "chemical": "Oryzalin"
+  },
+  {
+    "chemical": "Oxadiazon"
+  },
+  {
+    "chemical": "Oxadiazon"
+  },
+  {
+    "chemical": "Oxazepam"
+  },
+  {
+    "chemical": "Oxazepam"
+  },
+  {
+    "chemical": "Oxydemeton methyl"
+  },
+  {
+    "chemical": "Oxymetholone"
+  },
+  {
+    "chemical": "Oxymetholone"
+  },
+  {
+    "chemical": "Oxytetracycline (internal use)",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "79-57-2",
+    "date_listed": "January 1, 1991"
+  },
+  {
+    "chemical": "Oxytetracycline hydrochloride"
+  },
+  {
+    "chemical": "(internal use)"
+  },
+  {
+    "chemical": "Oxythioquinox (Chinomethionat)"
+  },
+  {
+    "chemical": "Oxythioquinox (Chinomethionat)"
+  },
+  {
+    "chemical": "Paclitaxel"
+  },
+  {
+    "chemical": "Panfuran S"
+  },
+  {
+    "chemical": "Paramethadione"
+  },
+  {
+    "chemical": "Parathion"
+  },
+  {
+    "chemical": "Penicillamine"
+  },
+  {
+    "chemical": "Pentabromodiphenyl ether mixture"
+  },
+  {
+    "chemical": "Pentachlorophenol"
+  },
+  {
+    "chemical": "Pentachlorophenol and by-products"
+  },
+  {
+    "chemical": "of its synthesis (complex mixture)"
+  },
+  {
+    "chemical": "Pentobarbital sodium"
+  },
+  {
+    "chemical": "Pentosan polysulfate sodium"
+  },
+  {
+    "chemical": "Pentostatin"
+  },
+  {
+    "chemical": "Perfluorononanoic acid (PFNA) and"
+  },
+  {
+    "chemical": "its salts"
+  },
+  {
+    "chemical": "Perfluorooctane sulfonate (PFOS)"
+  },
+  {
+    "chemical": "Perfluorooctane sulfonic acid"
+  },
+  {
+    "chemical": "(PFOS) and its salts and"
+  },
+  {
+    "chemical": "transformation and degradation"
+  },
+  {
+    "chemical": "precursors"
+  },
+  {
+    "chemical": "Perfluorooctanoic acid (PFOA)"
+  },
+  {
+    "chemical": "Perfluorooctanoic acid (PFOA)"
+  },
+  {
+    "chemical": "Pertuzumab"
+  },
+  {
+    "chemical": "Phenacemide"
+  },
+  {
+    "chemical": "Phenacetin"
+  },
+  {
+    "chemical": "Phenazopyridine"
+  },
+  {
+    "chemical": "Phenazopyridine hydrochloride"
+  },
+  {
+    "chemical": "Phenesterin"
+  },
+  {
+    "chemical": "Phenobarbital"
+  },
+  {
+    "chemical": "Phenolphthalein"
+  },
+  {
+    "chemical": "Phenoxybenzamine"
+  },
+  {
+    "chemical": "Phenoxybenzamine hydrochloride"
+  },
+  {
+    "chemical": "Phenprocoumon"
+  },
+  {
+    "chemical": "o-Phenylenediamine and its salts"
+  },
+  {
+    "chemical": "Phenyl glycidyl ether"
+  },
+  {
+    "chemical": "Phenylhydrazine and its salts"
+  },
+  {
+    "chemical": "o-Phenylphenate, sodium"
+  },
+  {
+    "chemical": "o-Phenylphenol"
+  },
+  {
+    "chemical": "Phenylphosphine"
+  },
+  {
+    "chemical": "Pimozide"
+  },
+  {
+    "chemical": "Pioglitazone"
+  },
+  {
+    "chemical": "Pipobroman"
+  },
+  {
+    "chemical": "Pirimicarb"
+  },
+  {
+    "chemical": "Plicamycin"
+  },
+  {
+    "chemical": "Polybrominated biphenyls",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "18378-89-7",
+    "date_listed": "January 1, 1988"
+  },
+  {
+    "chemical": "Polybrominated biphenyls"
+  },
+  {
+    "chemical": "Polychlorinated biphenyls"
+  },
+  {
+    "chemical": "Polychlorinated biphenyls"
+  },
+  {
+    "chemical": "Polychlorinated biphenyls"
+  },
+  {
+    "chemical": "chlorine by molecular weight)"
+  },
+  {
+    "chemical": "Polychlorinated dibenzo-p-dioxins"
+  },
+  {
+    "chemical": "Polychlorinated dibenzofurans"
+  },
+  {
+    "chemical": "Polygeenan"
+  },
+  {
+    "chemical": "Ponceau MX"
+  },
+  {
+    "chemical": "Potassium bromate"
+  },
+  {
+    "chemical": "Potassium dimethyldithiocarbamate"
+  },
+  {
+    "chemical": "Pravastatin sodium"
+  },
+  {
+    "chemical": "Prednisolone sodium phosphate"
+  },
+  {
+    "chemical": "Primidone"
+  },
+  {
+    "chemical": "Procarbazine"
+  },
+  {
+    "chemical": "Procarbazine hydrochloride"
+  },
+  {
+    "chemical": "Procarbazine hydrochloride"
+  },
+  {
+    "chemical": "Procymidone"
+  },
+  {
+    "chemical": "Progesterone"
+  },
+  {
+    "chemical": "Pronamide"
+  },
+  {
+    "chemical": "Propachlor"
+  },
+  {
+    "chemical": "Propargite"
+  },
+  {
+    "chemical": "Propargite"
+  },
+  {
+    "chemical": "Propazine"
+  },
+  {
+    "chemical": "beta-Propiolactone"
+  },
+  {
+    "chemical": "Propoxur"
+  },
+  {
+    "chemical": "Propylene glycol mono-t-butyl ether"
+  },
+  {
+    "chemical": "Propylene oxide"
+  },
+  {
+    "chemical": "Propylthiouracil"
+  },
+  {
+    "chemical": "Propylthiouracil"
+  },
+  {
+    "chemical": "Pulegone"
+  },
+  {
+    "chemical": "Pymetrozine"
+  },
+  {
+    "chemical": "Pyridine"
+  },
+  {
+    "chemical": "Pyrimethamine"
+  },
+  {
+    "chemical": "Quazepam"
+  },
+  {
+    "chemical": "Quinoline and its strong acid salts"
+  },
+  {
+    "chemical": "Quizalofop-ethyl"
+  },
+  {
+    "chemical": "Radionuclides"
+  },
+  {
+    "chemical": "Reserpine"
+  },
+  {
+    "chemical": "Residual (heavy) fuel oils"
+  },
+  {
+    "chemical": "Resmethrin"
+  },
+  {
+    "chemical": "Resmethrin"
+  },
+  {
+    "chemical": "required and essential for"
+  },
+  {
+    "chemical": "maintenance of normal",
+    "toxicity": [
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "recommended daily level during",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "10453-86-8",
+    "date_listed": "July 1, 1989"
+  },
+  {
+    "chemical": "Ribavirin"
+  },
+  {
+    "chemical": "Ribavirin"
+  },
+  {
+    "chemical": "Riddelliine"
+  },
+  {
+    "chemical": "Rifampin"
+  },
+  {
+    "chemical": "Safrole"
+  },
+  {
+    "chemical": "Salted fish, Chinese-style"
+  },
+  {
+    "chemical": "Secobarbital sodium"
+  },
+  {
+    "chemical": "Sedaxane"
+  },
+  {
+    "chemical": "Selenium sulfide"
+  },
+  {
+    "chemical": "Sermorelin acetate"
+  },
+  {
+    "chemical": "Shale-oils"
+  },
+  {
+    "chemical": "Silica, crystalline (airborne particles"
+  },
+  {
+    "chemical": "of respirable size)"
+  },
+  {
+    "chemical": "Silicon carbide whiskers"
+  },
+  {
+    "chemical": "Simazine"
+  },
+  {
+    "chemical": "Sodium dimethyldithiocarbamate"
+  },
+  {
+    "chemical": "Sodium fluoroacetate"
+  },
+  {
+    "chemical": "Soots, tars, and mineral"
+  },
+  {
+    "chemical": "oils(untreated and mildly treated"
+  },
+  {
+    "chemical": "oils and used engine oils)"
+  },
+  {
+    "chemical": "Spirodiclofen"
+  },
+  {
+    "chemical": "Spironolactone"
+  },
+  {
+    "chemical": "Stanozolol"
+  },
+  {
+    "chemical": "Sterigmatocystin"
+  },
+  {
+    "chemical": "Streptomycin sulfate"
+  },
+  {
+    "chemical": "Streptozocin (streptozotocin)"
+  },
+  {
+    "chemical": "Streptozotocin (streptozocin)"
+  },
+  {
+    "chemical": "Strong inorganic acid mists"
+  },
+  {
+    "chemical": "containing sulfuric acid"
+  },
+  {
+    "chemical": "Styrene"
+  },
+  {
+    "chemical": "Styrene oxide"
+  },
+  {
+    "chemical": "Sulfallate"
+  },
+  {
+    "chemical": "Sulfasalazine"
+  },
+  {
+    "chemical": "(Salicylazosulfapyridine)"
+  },
+  {
+    "chemical": "Sulfasalazine"
+  },
+  {
+    "chemical": "(Salicylazosulfapyridine)"
+  },
+  {
+    "chemical": "Sulfur dioxide"
+  },
+  {
+    "chemical": "Sulindac"
+  },
+  {
+    "chemical": "Talc containing asbestiform fibers"
+  },
+  {
+    "chemical": "Tamoxifen and its salts"
+  },
+  {
+    "chemical": "Tamoxifen citrate"
+  },
+  {
+    "chemical": "Temazepam"
+  },
+  {
+    "chemical": "Teniposide"
+  },
+  {
+    "chemical": "Terbacil"
+  },
+  {
+    "chemical": "Teriparatide"
+  },
+  {
+    "chemical": "Terrazole"
+  },
+  {
+    "chemical": "Testosterone and its esters"
+  },
+  {
+    "chemical": "Testosterone cypionate"
+  },
+  {
+    "chemical": "Testosterone enanthate",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "Gancer"
+  },
+  {
+    "chemical": "Gancer",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "315-37-7",
+    "date_listed": "April 1, 1990"
+  },
+  {
+    "chemical": "Tetrabromobisphenol A"
+  },
+  {
+    "chemical": "dioxin (TCDD)"
+  },
+  {
+    "chemical": "dioxin (TCDD)"
+  },
+  {
+    "chemical": "Tetrachloroethylene"
+  },
+  {
+    "chemical": "(Perchloroethylene)"
+  },
+  {
+    "chemical": "p-a,a,a-Tetrachlorotoluene"
+  },
+  {
+    "chemical": "Tetrachlorvinphos"
+  },
+  {
+    "chemical": "Tetracycline (internal use)"
+  },
+  {
+    "chemical": "Tetracyclines (internal use)"
+  },
+  {
+    "chemical": "Tetracycline hydrochloride (internal"
+  },
+  {
+    "chemical": "use)"
+  },
+  {
+    "chemical": "Tetrafluoroethylene"
+  },
+  {
+    "chemical": "Tetrahydrofuran"
+  },
+  {
+    "chemical": "Tetranitromethane"
+  },
+  {
+    "chemical": "Thalidomide"
+  },
+  {
+    "chemical": "Thioacetamide"
+  },
+  {
+    "chemical": "Thiodicarb"
+  },
+  {
+    "chemical": "Thioguanine"
+  },
+  {
+    "chemical": "Thiouracil"
+  },
+  {
+    "chemical": "Thiourea"
+  },
+  {
+    "chemical": "Thorium dioxide"
+  },
+  {
+    "chemical": "Titanium dioxide (airborne, unbound"
+  },
+  {
+    "chemical": "particles of respirable size)"
+  },
+  {
+    "chemical": "Tobacco, oral use of smokeless"
+  },
+  {
+    "chemical": "products"
+  },
+  {
+    "chemical": "Tobacco smoke"
+  },
+  {
+    "chemical": "Tobacco smoke (primary)"
+  },
+  {
+    "chemical": "Tobramycin sulfate"
+  },
+  {
+    "chemical": "Toluene"
+  },
+  {
+    "chemical": "Toluene diisocyanate"
+  },
+  {
+    "chemical": "o-Toluidine"
+  },
+  {
+    "chemical": "o-Toluidine hydrochloride"
+  },
+  {
+    "chemical": "Topiramate"
+  },
+  {
+    "chemical": "Toxaphene"
+  },
+  {
+    "chemical": "(Polychlorinated"
+  },
+  {
+    "chemical": "camphenes)"
+  },
+  {
+    "chemical": "Toxins derived from Fusarium"
+  },
+  {
+    "chemical": "Moniliforme (Fusarium"
+  },
+  {
+    "chemical": "verticillioides)"
+  },
+  {
+    "chemical": "Treosulfan"
+  },
+  {
+    "chemical": "Triadimefon"
+  },
+  {
+    "chemical": "Triamterene"
+  },
+  {
+    "chemical": "Triazolam",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ]
+  },
+  {
+    "chemical": "Gancer",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "28911-01-5",
+    "date_listed": "April 1, 1990"
+  },
+  {
+    "chemical": "S,S,S-Tributyl phosphorotrithioate"
+  },
+  {
+    "chemical": "(Tribufos, DEF)"
+  },
+  {
+    "chemical": "Tributyltin methacrylate"
+  },
+  {
+    "chemical": "Trichlormethine (Trimustine"
+  },
+  {
+    "chemical": "hydrochloride)"
+  },
+  {
+    "chemical": "Trichloroacetic acid"
+  },
+  {
+    "chemical": "Trichloroethylene"
+  },
+  {
+    "chemical": "Trichloroethylene"
+  },
+  {
+    "chemical": "Trientine hydrochloride"
+  },
+  {
+    "chemical": "Triforine"
+  },
+  {
+    "chemical": "Trilostane"
+  },
+  {
+    "chemical": "Trimethadione"
+  },
+  {
+    "chemical": "acid salts"
+  },
+  {
+    "chemical": "Trimethylolpropane triacrylate,"
+  },
+  {
+    "chemical": "technical grade"
+  },
+  {
+    "chemical": "Trimethyl phosphate"
+  },
+  {
+    "chemical": "Trimetrexate glucoronate"
+  },
+  {
+    "chemical": "Triphenyltin hydroxide"
+  },
+  {
+    "chemical": "Triphenyltin hydroxide"
+  },
+  {
+    "chemical": "Tris(aziridinyl)-p-benzoquinone"
+  },
+  {
+    "chemical": "(Thiotepa)"
+  },
+  {
+    "chemical": "phosphate (TDCPP)"
+  },
+  {
+    "chemical": "Trypan blue (commercial grade)"
+  },
+  {
+    "chemical": "Unleaded gasoline (wholly"
+  },
+  {
+    "chemical": "vaporized)"
+  },
+  {
+    "chemical": "Uracil mustard"
+  },
+  {
+    "chemical": "Uracil mustard"
+  },
+  {
+    "chemical": "Urethane (Ethyl carbamate)"
+  },
+  {
+    "chemical": "Urethane (Ethyl carbamate)"
+  },
+  {
+    "chemical": "Urofollitropin"
+  },
+  {
+    "chemical": "Valproate (Valproic acid)"
+  },
+  {
+    "chemical": "Vanadium pentoxide (orthorhombic"
+  },
+  {
+    "chemical": "crystalline form)"
+  },
+  {
+    "chemical": "Vinblastine sulfate"
+  },
+  {
+    "chemical": "Vinclozolin"
+  },
+  {
+    "chemical": "Vinclozolin",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "50471-44-8",
+    "date_listed": "May 15, 1998"
+  },
+  {
+    "chemical": "Vincristine sulfate"
+  },
+  {
+    "chemical": "Vinyl acetate"
+  },
+  {
+    "chemical": "Vinyl bromide"
+  },
+  {
+    "chemical": "Vinyl chloride"
+  },
+  {
+    "chemical": "(Vinyl cyclohexene dioxide)"
+  },
+  {
+    "chemical": "Vinyl fluoride"
+  },
+  {
+    "chemical": "Dichloroethylene)"
+  },
+  {
+    "chemical": "Trichloroethane)"
+  },
+  {
+    "chemical": "Vismodegib"
+  },
+  {
+    "chemical": "Warfarin"
+  },
+  {
+    "chemical": "Wood dust"
+  },
+  {
+    "chemical": "Zalcitabine"
+  },
+  {
+    "chemical": "Zidovudine (AZT)"
+  },
+  {
+    "chemical": "Zileuton",
+    "toxicity": [
+      "cancer",
+      "developmental",
+      "reproductive"
+    ],
+    "cas": "42422-67-7",
+    "date_listed": "January 1, 1990"
+  }
+]

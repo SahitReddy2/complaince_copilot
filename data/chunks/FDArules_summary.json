@@ -1,0 +1,20 @@
+[
+  {
+    "chunk": "A-1 21 CFR 701.1–701.2 — Scope & General Provisions Labels must not be false or misleading; otherwise the product is misbranded (§701.1). All required information must be conspicuous and easy to read (§701.2). Mandatory text must appear in English; if any foreign language appears anywhere on the package, all required statements must also be repeated in that language (§701.2 (d)). Type size and color contrast must make text legible; decorative graphics cannot obscure it. A-2 21 CFR 701.3 (+ 701.30 table) — Ingredient Declaration List every ingredient in descending order of predominance by weight. Components present at ≤ 1 % may be listed in any order after the ≥ 1 % ingredients. Collective names “Fragrance” or “Flavor” may be used; dual-use components require “Fragrance and Flavor.” Use official INCI or names in §701.30. Ingredient list goes on the information panel (side/back), in font ≥ 1⁄16 inch and contrasting color. A-3 21 CFR 701.11–701.12 — Product Identity & Firm Address Statement of identity (common name or illustrative depiction) must appear prominently on the Principal Display Panel (PDP). Name & place of business of the manufacturer, packer, or distributor are required. If the firm named isn’t the actual manufacturer, add qualifying words like “Manufactured for …” or “Distributed by …”. Address must include street, city, state, ZIP; street may be omitted if it’s listed in a current phone directory. Imported products still need a U.S. contact plus the foreign country-of-origin statement. A-4 21 CFR 701.10–701.13 — Principal Display Panel (PDP) & Net Quantity PDP = panel most likely shown or examined under normal sale. It must be large enough to contain all required information clearly. Net quantity statement goes in the lower 30 % of the PDP, parallel to the package base. Liquids declare fluid measure; solids, weight; aerosols, weight. Dual U.S. customary + metric units are required (via FPLA). Decorative packages ≤ ¼ oz may use a hang-tag, but type-size rules still apply; no exaggerating terms (“giant pint”). A-5 21 CFR 701.9 (+ related small-package clauses) — Exemptions & Salon-Use Packs Bulk or contract-pack shipments may omit retail labeling if covered by a written agreement ensuring relabeling before retail sale. Exemption is void if the product is adulterated/misbranded when it leaves the contract packer. Tiny tester vials, hotel amenities, or professional-only salon containers may leave off the ingredient list provided the outer carton, insert, or a tear-away tag supplies the full declaration. Under MoCRA §609, most professional products now must meet retail labeling rules unless explicitly exempt. A-6 Fair Packaging & Labeling Act (15 U.S.C. §1453-1455) — Net-Quantity & Slack-Fill Rules Every consumer cosmetic must display: (1) identity, (2) name/place of business, (3) net quantity in both U.S. customary and SI metric units. Net quantity must appear in the lower PDP area, free of qualifying adjectives (no “jumbo,” “full quart,” etc.). Prohibits non-functional slack-fill—empty space that misleads consumers about actual fill level. FDA enforces FPLA for cosmetics; violations render products misbranded under the FD&C Act and subject to seizure or import",
+    "chunk_index": 0,
+    "metadata": {
+      "source": "/Users/rextabachnick/rag-app/law_docs/summary/FDArules_summary",
+      "type": "summary",
+      "category": "fdarules_summary"
+    }
+  },
+  {
+    "chunk": "refusal. Ask ChatGPT",
+    "chunk_index": 1,
+    "metadata": {
+      "source": "/Users/rextabachnick/rag-app/law_docs/summary/FDArules_summary",
+      "type": "summary",
+      "category": "fdarules_summary"
+    }
+  }
+]
