@@ -4,6 +4,8 @@ import re
 from typing import Dict, List, Optional
 from pydantic import BaseModel
 
+from backend.config import get_ollama_client, OLLAMA_CHAT_MODEL
+
 class ExtractedIngredient(BaseModel):
     ingredient_name: str
     inci_name: Optional[str] = None
@@ -15,7 +17,8 @@ class ExtractedIngredient(BaseModel):
 
 class IngredientExtractor:
     def __init__(self, openai_api_key: str = None):
-        self.client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+        self.client = get_ollama_client()
+        self.model = OLLAMA_CHAT_MODEL
     
     def extract(self, document_text: str) -> List[ExtractedIngredient]:
         print("🧪 Extracting from:\n", document_text)
@@ -46,7 +49,7 @@ class IngredientExtractor:
         
         try:
             response = self.client.chat.completions.create(
-                model="llama3.1:8b",
+                model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
                 max_tokens=2000

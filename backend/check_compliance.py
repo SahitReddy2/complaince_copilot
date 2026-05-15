@@ -15,37 +15,26 @@ from typing import List, Dict, Tuple
 # allow imports from project root  
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from dotenv import load_dotenv
-import psycopg2
 from openai import OpenAI
 
-from backend.industry_config import load_industry, get_law_frameworks, get_high_risk_components
+from backend.config import get_connection, get_ollama_client, OLLAMA_CHAT_MODEL, OLLAMA_EMBED_MODEL
+from backend.industry_config import load_industry
 
 # ───────────────────────────  SETUP  ────────────────────────────
 
 def get_db_connection():
-    """Get database connection."""
-    load_dotenv()
-    return psycopg2.connect(
-        host=os.getenv("PG_HOST"),
-        port=int(os.getenv("PG_PORT", 5432)),
-        dbname=os.getenv("PG_DB"),
-        user=os.getenv("PG_USER"),
-        password=os.getenv("PG_PASSWORD"),
-        sslmode="require"
-    )
+    """Get database connection from central config."""
+    return get_connection()
+
 
 def get_openai_client():
-    """Get Ollama client (OpenAI-compatible)."""
-    load_dotenv()
-    return OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+    """Get Ollama client from central config."""
+    return get_ollama_client()
+
 
 def embed_query(client: OpenAI, query: str) -> List[float]:
     """Create embedding for query."""
-    resp = client.embeddings.create(
-        model="nomic-embed-text",
-        input=query,
-    )
+    resp = client.embeddings.create(model=OLLAMA_EMBED_MODEL, input=query)
     return resp.data[0].embedding
 
 def cosine_similarity_sql(embedding: List[float]) -> str:
@@ -304,7 +293,7 @@ Return ONLY a JSON object:
 
     try:
         response = client.chat.completions.create(
-            model="llama3.1:8b",
+            model=OLLAMA_CHAT_MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.1,
             max_tokens=1000,

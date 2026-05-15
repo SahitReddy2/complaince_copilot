@@ -209,114 +209,69 @@ async def analyze_document_comprehensive(
         # Perform compliance analysis if we have extracted data
         if results["ingredients"] or results["claims"]:
             ingredient_names = [ing["ingredient_name"] for ing in results["ingredients"]]
-            
-            print("📝 Compliance input JSON:")
-            print(json.dumps({"ingredients": ingredient_names}, indent=2))
-
-            with tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json") as f:
-                ingredients_path = f.name
-                json.dump({
-                    "industry": industry,
-                    "jurisdictions": [j.strip() for j in jurisdictions.split(",") if j.strip()],
-                    "ingredients": ingredient_names,
-                    "claims": [claim["claim_text"] for claim in results["claims"]]
-                }, f)
+            claim_texts = [claim["claim_text"] for claim in results["claims"]]
+            jurisdiction_list = [j.strip() for j in jurisdictions.split(",") if j.strip()]
 
             try:
-                print("Running check_compliance.py...")
-                proc = subprocess.run(
-                    [sys.executable, "backend/check_compliance.py", ingredients_path],
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE,
-                    text=True,
-                    encoding="utf-8"
+                from backend.check_compliance import evaluate_product_direct
+                compliance_data = evaluate_product_direct(
+                    ingredients=ingredient_names,
+                    claims=claim_texts,
+                    industry=industry,
+                    jurisdictions=jurisdiction_list or None,
                 )
 
-                print("Compliance stdout:")
-                print(proc.stdout)
+                non_compliant = compliance_data.get("non_compliant", [])
+                results["compliance_analysis"] = non_compliant
+                results["by_jurisdiction"] = compliance_data.get("by_jurisdiction", {})
 
-                if proc.returncode != 0:
-                    print(f"Compliance Script Failed: \n{proc.stderr}")
-                    results["compliance_analysis"] = {
-                        "error": "Compliance check failed",
-                        "details": proc.stderr
-                    }
-                else:
-                    try:
-                        json_lines = proc.stdout.strip().splitlines()
-                        last_line = json_lines[-1].strip()
+                # Severity rollup for the frontend dashboard
+                severity_counts = {"critical": 0, "high": 0, "medium": 0, "low": 0, "resolved": 0}
+                recent_issues_summary = []
 
-                        # Print debug info
-                        print("📤 Compliance script last line:")
-                        print(last_line)
+                for idx, issue in enumerate(non_compliant):
+                    severity = (issue.get("severity") or "low").lower()
+                    if severity in severity_counts:
+                        severity_counts[severity] += 1
+                    else:
+                        severity_counts["low"] += 1
 
-                        # Try parsing just the last line
-                        compliance_data = json.loads(last_line)
-                        results["compliance_analysis"] = compliance_data.get("non_compliant", [])
+                    if idx < 3:
+                        recent_issues_summary.append({
+                            "summary": (issue.get("reason") or "")[:100] + "...",
+                            "severity": severity,
+                            "law": issue.get("law", "Unknown Law"),
+                        })
 
-                        # Accquiring Information for Frontend
-                        severity_counts = {
-                            "critical": 0,
-                            "high": 0,
-                            "medium": 0,
-                            "low": 0,
-                            "resolved": 0
-                        }
+                penalty = (
+                    severity_counts["critical"] * 20
+                    + severity_counts["high"] * 10
+                    + severity_counts["medium"] * 5
+                    + severity_counts["low"] * 2
+                )
+                results["compliance_score"] = max(0, 100 - penalty)
+                results["issue_counts"] = severity_counts
+                results["recent_issues"] = recent_issues_summary
 
-                        recent_issues_summary = []
+                print(f"✅ Parsed {len(non_compliant)} compliance findings.")
 
-                        for idx, issue in enumerate(results["compliance_analysis"]):
-                            severity = issue.get("severity", "low").lower()
-                            if severity in severity_counts:
-                                severity_counts[severity] += 1
-                            else:
-                                severity_counts["low"] += 1 #(Requires unknown classification -> Added to LOW)
-
-                            if idx < 3:
-                                recent_issues_summary.append({
-                                    "summary": issue.get("reason", "")[:100] + "...",
-                                    "severity": severity,
-                                    "law": issue.get("law", "Unknown Law")
-                                })
-
-                        penalty = (
-                            severity_counts["critical"] * 20 +
-                            severity_counts["high"] * 10 +
-                            severity_counts["medium"] * 5 +
-                            severity_counts["low"] * 2
-                        )
-                        compliance_score = max(0, 100-penalty)
-
-                        results["compliance_score"] = compliance_score
-                        results["issue_counts"] = severity_counts
-                        results["recent_issues"] = recent_issues_summary
-
-                        print(f"✅ Parsed {len(results['compliance_analysis'])} compliance results.")
-
-                    except (json.JSONDecodeError, IndexError) as e:
-                        print("❌ Failed to parse JSON:", e)
-                        print("⚠️ Full stdout:")
-                        print(proc.stdout)
-                        results["compliance_analysis"] = {
-                            "error": "Could not parse compliance output",
-                            "raw_output": proc.stdout
-                        }
-                    print(f"Parse {len(compliance_data)} compliance results.")
             except Exception as e:
-                print(f"Error running compliance script: {e}")
+                print(f"Compliance analysis failed: {e}")
+                traceback.print_exc()
                 results["compliance_analysis"] = {"error": str(e)}
-            finally:
-                os.unlink(ingredients_path)
         
         from uuid import uuid4
         from supabase import create_client
 
-        SUPABASE_URL = "https://skflyrfklbfbxlvifyvw.supabase.co"
-        SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrZmx5cmZrbGJmYnhsdmlmeXZ3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NDUxNDQ4MCwiZXhwIjoyMDcwMDkwNDgwfQ.kmHpAr5w_GqF8fHpHMPDqffBjp0QgrJQh3B2dvfyW2I"
-        
+        SUPABASE_URL = os.getenv("SUPABASE_URL")
+        SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY") or os.getenv("SUPABASE_KEY")
+
         if not SUPABASE_URL or not SUPABASE_KEY:
-            raise HTTPException(status_code=500, detail="Supabase credentials not configured")
-        
+            raise HTTPException(
+                status_code=500,
+                detail="Supabase credentials not configured. Set SUPABASE_URL and SUPABASE_SERVICE_KEY in .env",
+            )
+
         supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
         ext = file.filename.split('.')[-1]

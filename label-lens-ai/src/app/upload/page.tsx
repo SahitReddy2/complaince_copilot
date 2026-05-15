@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null);
   const [data, setData] = useState<any | null>(null);
@@ -33,7 +35,7 @@ export default function UploadPage() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:8000/api/extract/analyze-document", {
+      const res = await fetch(`${API_URL}/api/extract/analyze-document`, {
         method: "POST",
         body: formData,
       });

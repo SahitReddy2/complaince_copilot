@@ -3,6 +3,10 @@
 .env.*
 */.env
 backend/.env
+# Allow example/template env files
+!.env.example
+!*/.env.local.example
+!*/.env.example
 
 # Python
 __pycache__/

@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List, Optional
 from pydantic import BaseModel
-import os
-from database.database import get_db
-from agents.compliance_agent import ComplianceAgent
-from extractors.ingredient_extractor import IngredientExtractor, ExtractedIngredient
-from extractors.claim_extractor import ClaimExtractor, ExtractedClaim
+
+from backend.database.database import get_db
+from backend.agents.compliance_agent import ComplianceAgent
+from backend.extractors.ingredient_extractor import ExtractedIngredient
+from backend.extractors.claim_extractor import ExtractedClaim
 
 router = APIRouter(prefix="/api/compliance", tags=["compliance"])
 

@@ -4,6 +4,8 @@ import re
 from typing import Dict, List, Optional
 from pydantic import BaseModel
 
+from backend.config import get_ollama_client, OLLAMA_CHAT_MODEL
+
 class ExtractedClaim(BaseModel):
     claim_text: str
     claim_type: str  # efficacy, safety, natural, anti-aging, etc.
@@ -13,7 +15,8 @@ class ExtractedClaim(BaseModel):
 
 class ClaimExtractor:
     def __init__(self, openai_api_key: str = None, industry: str = "cosmetics"):
-        self.client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+        self.client = get_ollama_client()
+        self.model = OLLAMA_CHAT_MODEL
 
         # Load industry-specific claim categories (falls back to hardcoded cosmetics)
         try:
@@ -79,7 +82,7 @@ class ClaimExtractor:
         
         try:
             response = self.client.chat.completions.create(
-                model="llama3.1:8b",
+                model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
                 max_tokens=2000

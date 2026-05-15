@@ -1,13 +1,15 @@
-import openai
 from typing import Dict, List, Optional
 from sqlalchemy.orm import Session
+
+from backend.config import get_ollama_client, OLLAMA_CHAT_MODEL
 from backend.database.models import Regulation, ProhibitedIngredient, ClaimRestriction
 from backend.extractors.ingredient_extractor import ExtractedIngredient
 from backend.extractors.claim_extractor import ExtractedClaim
 
 class ComplianceAgent:
     def __init__(self, openai_api_key: str = None, db: Session = None):
-        self.client = openai.OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+        self.client = get_ollama_client()
+        self.model = OLLAMA_CHAT_MODEL
         self.db = db
     
     def analyze_product_compliance(self, 
@@ -254,7 +256,7 @@ class ComplianceAgent:
         
         try:
             response = self.client.chat.completions.create(
-                model="llama3.1:8b",
+                model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
                 max_tokens=1000
